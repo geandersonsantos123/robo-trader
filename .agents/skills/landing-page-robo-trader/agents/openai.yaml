@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Page Robô Trader"
+  short_description: "Implementar e validar a landing page Robô Trader"
+  default_prompt: "Use $landing-page-robo-trader para executar a próxima etapa da landing page conforme a documentação do repositório."

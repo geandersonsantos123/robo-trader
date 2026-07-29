@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - (var(--gutter) * 2)), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(5rem, 14vw, 9rem) 0;
+  scroll-margin-top: var(--header-height);
+}
+
+.section > .container {
+  padding-bottom: clamp(4.5rem, 12vw, 8rem);
+}
+
+.section__texture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: clip;
+  pointer-events: none;
+}
+
+.section__texture--world::before {
+  position: absolute;
+  width: min(80rem, 120%);
+  aspect-ratio: 12 / 7;
+  content: "";
+  background: url("../images/backgrounds/world-network.svg") center / contain no-repeat;
+  opacity: 0.26;
+}
+
+.section-heading {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 50rem;
+  margin-bottom: clamp(2.25rem, 8vw, 4.5rem);
+}
+
+.section-heading p:not(.eyebrow) {
+  max-width: 43rem;
+  font-size: clamp(1rem, 2.4vw, 1.18rem);
+}
+
+.section-heading--center {
+  justify-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading--center h2 {
+  max-width: 18ch;
+}
+
+.section-cta {
+  margin-top: clamp(2rem, 7vw, 4rem);
+}
+
+.site-header {
+  position: fixed;
+  z-index: 50;
+  inset: 0 0 auto;
+  min-height: var(--header-height);
+  border-bottom: 1px solid transparent;
+  background: rgba(2, 7, 6, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.site-header.is-scrolled {
+  border-color: var(--color-border-soft);
+  background: rgba(2, 7, 6, 0.92);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+}
+
+.site-footer {
+  padding-block: 3rem calc(3rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-border-soft);
+  background: #010403;
+}
+
+.footer__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.site-footer nav a,
+.footer__meta,
+.text-button {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer nav a,
+.text-button {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+}
+
+.footer__meta {
+  display: grid;
+  gap: 0.5rem;
+}

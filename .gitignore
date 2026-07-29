@@ -1,0 +1,17 @@
+# System and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and local artifacts
+*.log
+artifacts/
+coverage/
+
+# Environment and dependency folders (not used by this prototype)
+.env
+.env.*
+!.env.example
+node_modules/
+dist/

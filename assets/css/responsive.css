@@ -1,0 +1,160 @@
+@media (max-width: 359px) {
+  :root { --gutter: 1rem; }
+
+  h1 { font-size: 2.35rem; }
+  h2 { font-size: 1.95rem; }
+
+  .micro-grid { grid-template-columns: 1fr; }
+  .micro-card { grid-template-columns: auto 1fr; justify-items: start; text-align: left; }
+  .timeline__step { grid-template-columns: 3.2rem 1fr; }
+  .timeline__step .icon-tile { display: none; }
+  .timeline::before { left: 1.55rem; }
+  .timeline__number { width: 3.1rem; }
+  .sticky-cta > div { display: none; }
+  .sticky-cta { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 36rem) {
+  .button { width: fit-content; }
+  .button--wide { width: 100%; }
+  .pain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pain-card { grid-template-columns: 1fr; }
+  .qualification-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .consent-banner { right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom)); left: auto; }
+  .consent-banner__actions { justify-self: end; min-width: 18rem; }
+}
+
+@media (min-width: 48rem) {
+  .benefit-grid,
+  .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .feature-card { min-height: 15rem; align-content: start; }
+  .footer__grid { grid-template-columns: auto 1fr auto; align-items: center; }
+  .site-footer nav { justify-content: center; }
+  .footer__meta { justify-items: end; text-align: right; }
+  .sticky-cta { display: none !important; }
+}
+
+@media (min-width: 60rem) {
+  .menu-toggle { display: none; }
+
+  .site-nav {
+    position: static;
+    display: flex;
+    width: auto;
+    gap: 0.2rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .site-nav a { min-height: 2.75rem; padding: 0.55rem 0.8rem; font-size: 0.9rem; }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 0.88fr) minmax(28rem, 1.12fr);
+    gap: 1.25rem 3rem;
+    align-items: center;
+  }
+
+  .hero__copy { grid-row: span 2; }
+  .micro-grid { grid-column: 2; }
+  .hero .risk-notice { grid-column: 2; }
+
+  .possibility__layout {
+    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+    align-items: center;
+  }
+
+  .possibility .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .possibility .feature-card { min-height: 17rem; }
+
+  .pain-card { grid-template-columns: auto 1fr; min-height: 10rem; }
+
+  .demonstration__grid { grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr); align-items: center; gap: 3rem; }
+
+  .safety__grid { grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr); align-items: start; gap: 4rem; }
+  .safety__grid .section-cta { grid-column: 1; margin-top: -8rem; align-self: end; }
+
+  .button { padding-inline: 1.5rem; }
+}
+
+@media (min-width: 70rem) {
+  .timeline {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .timeline::before {
+    top: 1.7rem;
+    right: 8%;
+    bottom: auto;
+    left: 8%;
+    width: auto;
+    height: 1px;
+  }
+
+  .timeline__step {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: start;
+    text-align: center;
+  }
+
+  .timeline__number { width: 3.4rem; }
+  .timeline__step .icon-tile { margin-top: 0.8rem; }
+  .timeline__step p { max-width: 11rem; }
+}
+
+@media (max-width: 47.99rem) {
+  .sticky-cta { display: grid; }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header { background: rgba(2, 7, 6, 0.98); }
+  .consent-banner,
+  .sticky-cta { background: var(--color-surface-raised); }
+}
+
+.no-js .site-header {
+  position: relative;
+}
+
+.no-js .header__inner {
+  min-height: auto;
+  flex-wrap: wrap;
+  padding-block: 0.75rem;
+}
+
+.no-js .menu-toggle {
+  display: none;
+}
+
+.no-js .site-nav {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  padding: 0.5rem;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+}
+
+@media (min-width: 48rem) {
+  .no-js .header__inner {
+    flex-wrap: nowrap;
+  }
+
+  .no-js .site-nav {
+    display: flex;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#020706"/><stop offset="1" stop-color="#0b1f1a"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#00e6b0" stop-opacity=".28"/><stop offset="1" stop-color="#00e6b0" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="930" cy="310" r="360" fill="url(#glow)"/>
+  <g fill="none" stroke="#00e6b0" opacity=".28">
+    <ellipse cx="900" cy="350" rx="250" ry="170"/><ellipse cx="900" cy="350" rx="145" ry="170"/><path d="M650 350h500M690 270c130 55 290 55 420 0M690 430c130-55 290-55 420 0"/>
+  </g>
+  <g fill="#00e6b0"><circle cx="758" cy="296" r="6"/><circle cx="940" cy="205" r="6"/><circle cx="1082" cy="403" r="6"/></g>
+  <text x="86" y="290" fill="#00e6b0" font-family="Arial, sans-serif" font-size="24" letter-spacing="7">ROBÔ TRADER</text>
+  <text x="86" y="365" fill="#f4f8f7" font-family="Arial, sans-serif" font-size="54" font-weight="700">APRESENTAÇÃO GUIADA</text>
+  <text x="86" y="417" fill="#a8b5b1" font-family="Arial, sans-serif" font-size="24">Aprenda • teste • configure • acompanhe</text>
+</svg>
