@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/sections.css?v=vsl-guided">
+    <link rel="stylesheet" href="assets/css/sections.css?v=vsl-hero">
     <link rel="stylesheet" href="assets/css/motion.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="module" src="assets/js/app.js"></script>
@@ -83,13 +83,20 @@
 
           <div class="video-card glass-card" data-reveal>
             <div class="video-shell" data-video-shell>
-              <video id="vsl-video" preload="none" playsinline poster="assets/images/posters/vsl-placeholder.svg" aria-describedby="video-caption"></video>
-              <button class="video-play" type="button" data-video-play aria-label="Abrir apresentação do Robô Trader" data-cta data-cta-id="hero-video-play" data-section="hero" data-destination="video" data-action-type="video">
-                <svg aria-hidden="true"><use href="#icon-play"/></svg>
-              </button>
-              <span class="video-badge">Apresentação breve</span>
+              <video
+                id="vsl-video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="https://res.cloudinary.com/x5w8hleo/video/upload/so_2,q_auto,w_960/v1785369344/VSL_horizontal_pronta_zyfk1h.jpg"
+                width="1920"
+                height="1080"
+                data-vsl-section-video
+              >
+                <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785369344/VSL_horizontal_pronta_zyfk1h.mp4" type="video/mp4">
+                Seu navegador não conseguiu reproduzir este vídeo.
+              </video>
             </div>
-            <p id="video-caption" class="video-caption" data-video-status>VSL preparada. O vídeo oficial permanece desconectado neste protótipo.</p>
           </div>
 
           <div class="micro-grid" data-reveal-group>
@@ -172,20 +179,14 @@
             <p data-reveal>O fluxo abaixo é ilustrativo e explica o método. Ele não representa a interface final nem exibe dados financeiros.</p>
           </div>
           <div class="demonstration__grid">
-            <div class="vsl-player glass-card" data-reveal>
-              <video
-                class="vsl-player__media"
-                controls
-                playsinline
-                preload="metadata"
-                poster="https://res.cloudinary.com/x5w8hleo/video/upload/so_2,q_auto,w_960/v1785369344/VSL_horizontal_pronta_zyfk1h.jpg"
-                width="1920"
-                height="1080"
-                data-vsl-section-video
-              >
-                <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785369344/VSL_horizontal_pronta_zyfk1h.mp4" type="video/mp4">
-                Seu navegador não conseguiu reproduzir este vídeo.
-              </video>
+            <div class="prototype-panel glass-card" role="img" aria-label="Fluxo ilustrativo, não representa a interface final do produto" data-reveal>
+              <div class="prototype-panel__header"><span><i></i><i></i><i></i></span><strong>FLUXO ILUSTRATIVO</strong></div>
+              <div class="prototype-flow">
+                <div><span>01</span><strong>Parâmetros</strong><small>Definidos por você</small></div>
+                <div><span>02</span><strong>Regras e limites</strong><small>Estrutura configurada</small></div>
+                <div><span>03</span><strong>Automação</strong><small>Execução do configurado</small></div>
+                <div><span>04</span><strong>Acompanhamento</strong><small>Controle do usuário</small></div>
+              </div>
             </div>
             <div class="benefit-list" data-reveal-group>
               <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Execução configurável</h3><p>A automação executa parâmetros definidos pelo usuário.</p></div></article>
