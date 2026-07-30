@@ -126,6 +126,48 @@
   margin-top: 0.25rem;
 }
 
+.vsl-showcase {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(93, 255, 216, 0.09), transparent 24rem),
+    linear-gradient(180deg, var(--color-bg), var(--color-bg-soft) 48%, var(--color-bg));
+}
+
+.vsl-showcase .section__texture--world::before {
+  top: -4rem;
+  left: 50%;
+  opacity: 0.18;
+  transform: translateX(-50%);
+}
+
+.vsl-showcase__content {
+  display: grid;
+  justify-items: center;
+  gap: clamp(1.3rem, 4vw, 2rem);
+}
+
+.vsl-showcase .section-heading {
+  margin-inline: auto;
+}
+
+.vsl-player {
+  width: min(100%, 58rem);
+  padding: clamp(0.45rem, 1.6vw, 0.75rem);
+  overflow: clip;
+  border-color: rgba(93, 255, 216, 0.42);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card), 0 0 60px rgba(0, 230, 176, 0.12);
+}
+
+.vsl-player__media {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: calc(var(--radius-lg) - 0.5rem);
+  background: #020706;
+  object-fit: contain;
+}
+
 .possibility {
   background: linear-gradient(180deg, var(--color-bg), var(--color-bg-soft) 45%, var(--color-bg));
 }
