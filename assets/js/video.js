@@ -6,14 +6,17 @@ export function initVideo({ showDialog }) {
   const video = select("#vsl-video");
   const play = select("[data-video-play]");
   const status = select("[data-video-status]");
-  if (!video || !play) return;
+  if (!video) return;
 
   if (runtimeConfig.videoPoster) video.poster = runtimeConfig.videoPoster;
 
+  let progressBound = false;
   const bindProgress = () => {
+    if (progressBound) return;
+    progressBound = true;
     const reached = new Set();
     video.addEventListener("play", () => {
-      track("VideoStart", { video_id: "vsl", source_section: "hero" }, { dedupKey: "VideoStart:vsl" });
+      track("VideoStart", { video_id: "vsl", source_section: "presentation" }, { dedupKey: "VideoStart:vsl" });
     });
     video.addEventListener("timeupdate", () => {
       if (!Number.isFinite(video.duration) || video.duration <= 0) return;
@@ -28,6 +31,11 @@ export function initVideo({ showDialog }) {
       track("VideoComplete", { video_id: "vsl", progress: 100 }, { dedupKey: "VideoComplete:vsl" });
     });
   };
+
+  if (!play) {
+    if (video.querySelector("source") || video.currentSrc || video.src) bindProgress();
+    return;
+  }
 
   play.addEventListener("click", async () => {
     const source = toSafeUrl(runtimeConfig.videoUrl);

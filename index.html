@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Robô Trader | Aprenda, teste e configure sua automação</title>
     <meta name="description" content="Conheça uma estrutura de tecnologia, formação, testes e suporte para configurar e acompanhar automação em mercados globais compatíveis.">
-    <meta name="theme-color" content="#020706">
+    <meta name="theme-color" content="#020605">
     <meta name="robots" content="noindex,nofollow">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
@@ -14,13 +14,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Robô Trader | Tecnologia global com controle humano">
     <meta name="twitter:description" content="Aprenda, teste, configure e acompanhe uma automação definida por você.">
-    <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/images/brand/robo-trader-mark.png" type="image/png">
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/sections.css?v=vsl-hero">
+    <link rel="stylesheet" href="assets/css/sections.css?v=brand-refresh">
     <link rel="stylesheet" href="assets/css/motion.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="module" src="assets/js/app.js"></script>
@@ -53,8 +53,7 @@
     <header class="site-header" data-site-header>
       <div class="container header__inner">
         <a class="brand" href="#inicio" aria-label="Robô Trader — início">
-          <span class="brand__mark" aria-hidden="true">R</span>
-          <span class="brand__text"><strong>ROBÔ</strong><small>TRADER</small></span>
+          <img class="brand__logo" src="assets/images/brand/robo-trader-logo-horizontal.png" alt="Robô Trader" width="260" height="81">
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
           <span class="sr-only">Abrir menu</span><span></span><span></span><span></span>
@@ -81,21 +80,11 @@
             </a>
           </div>
 
-          <div class="video-card glass-card" data-reveal>
-            <div class="video-shell" data-video-shell>
-              <video
-                id="vsl-video"
-                controls
-                playsinline
-                preload="metadata"
-                poster="https://res.cloudinary.com/x5w8hleo/video/upload/so_2,q_auto,w_960/v1785458811/vsl_horizontal_com_efeitos_yoeixa.jpg"
-                width="1920"
-                height="1080"
-                data-vsl-section-video
-              >
-                <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4" type="video/mp4">
-                Seu navegador não conseguiu reproduzir este vídeo.
-              </video>
+          <div class="hero-visual glass-card" role="img" aria-label="Painel visual tecnológico da marca Robô Trader" data-reveal>
+            <div class="hero-visual__screen">
+              <img src="assets/images/brand/robo-trader-logo.png" alt="" aria-hidden="true" width="220" height="255">
+              <div class="hero-visual__chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <p>Mercados compatíveis • Tecnologia • Controle</p>
             </div>
           </div>
 
@@ -174,18 +163,26 @@
       <section class="section demonstration" id="demonstracao" aria-labelledby="demo-title">
         <div class="container">
           <div class="section-heading" data-reveal-group>
-            <p class="eyebrow" data-reveal>Demonstração e benefícios</p>
+            <p class="eyebrow" data-reveal>Apresentação guiada</p>
             <h2 id="demo-title" data-reveal>Veja como parâmetros viram <span>uma execução acompanhável.</span></h2>
             <p data-reveal>O fluxo abaixo é ilustrativo e explica o método. Ele não representa a interface final nem exibe dados financeiros.</p>
           </div>
           <div class="demonstration__grid">
-            <div class="prototype-panel glass-card" role="img" aria-label="Fluxo ilustrativo, não representa a interface final do produto" data-reveal>
-              <div class="prototype-panel__header"><span><i></i><i></i><i></i></span><strong>FLUXO ILUSTRATIVO</strong></div>
-              <div class="prototype-flow">
-                <div><span>01</span><strong>Parâmetros</strong><small>Definidos por você</small></div>
-                <div><span>02</span><strong>Regras e limites</strong><small>Estrutura configurada</small></div>
-                <div><span>03</span><strong>Automação</strong><small>Execução do configurado</small></div>
-                <div><span>04</span><strong>Acompanhamento</strong><small>Controle do usuário</small></div>
+            <div class="video-card video-card--presentation glass-card" data-reveal>
+              <div class="video-shell" data-video-shell>
+                <video
+                  id="vsl-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="https://res.cloudinary.com/x5w8hleo/video/upload/so_2,q_auto,w_960/v1785458811/vsl_horizontal_com_efeitos_yoeixa.jpg"
+                  width="1920"
+                  height="1080"
+                  data-vsl-section-video
+                >
+                  <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4" type="video/mp4">
+                  Seu navegador não conseguiu reproduzir este vídeo.
+                </video>
               </div>
             </div>
             <div class="benefit-list" data-reveal-group>
@@ -342,7 +339,7 @@
 
     <footer class="site-footer" data-site-footer>
       <div class="container footer__grid">
-        <a class="brand" href="#inicio" aria-label="Robô Trader — voltar ao início"><span class="brand__mark" aria-hidden="true">R</span><span class="brand__text"><strong>ROBÔ</strong><small>TRADER</small></span></a>
+        <a class="brand" href="#inicio" aria-label="Robô Trader — voltar ao início"><img class="brand__logo" src="assets/images/brand/robo-trader-logo-horizontal.png" alt="Robô Trader" width="260" height="81"></a>
         <nav aria-label="Navegação do rodapé"><a href="#metodo">Funcionamento</a><a href="#entrega">Entrega</a><a href="#oferta">Oferta</a><a href="#faq">Dúvidas</a></nav>
         <div class="footer__meta"><p>Protótipo funcional — integrações comerciais desativadas.</p><button type="button" class="text-button" data-consent-settings>Preferências de marketing</button></div>
       </div>
