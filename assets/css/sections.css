@@ -801,12 +801,15 @@
 }
 
 .offer-card {
-  width: min(100%, 42rem);
+  width: min(100%, 48rem);
   margin-inline: auto;
   padding: clamp(1.2rem, 5vw, 2.2rem);
   border-color: rgba(93, 255, 216, 0.46);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card), 0 0 70px rgba(0, 230, 176, 0.1);
+  background:
+    linear-gradient(145deg, rgba(0, 230, 184, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(6, 16, 14, 0.94), rgba(2, 6, 5, 0.9));
+  box-shadow: var(--shadow-card), 0 0 80px rgba(0, 230, 176, 0.13);
 }
 
 .offer-card header {
@@ -815,11 +818,22 @@
   text-align: center;
 }
 
-.offer-card header p {
+.offer-card header p,
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.4rem 0.72rem;
+  border: 1px solid rgba(0, 230, 184, 0.34);
+  border-radius: 999px;
+  background: rgba(0, 230, 184, 0.08);
   color: var(--color-brand);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .offer-card header h3 {
@@ -848,25 +862,106 @@
 .price-lockup {
   display: grid;
   justify-items: center;
-  margin-block: 1.6rem;
-  padding-block: 1.3rem;
+  gap: 0.45rem;
+  margin-block: 1.4rem;
+  padding: clamp(1.1rem, 4vw, 1.5rem);
   border-block: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  background: rgba(2, 6, 5, 0.46);
 }
 
 .price-lockup span {
   color: var(--color-muted);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   font-weight: 720;
-  letter-spacing: 0.12em;
+}
+
+.price-lockup s {
+  color: #cbd5d2;
+  text-decoration-color: rgba(0, 230, 184, 0.82);
+  text-decoration-thickness: 0.12em;
+}
+
+.price-lockup small {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 780;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .price-lockup strong {
   color: var(--color-brand-light);
-  font-size: clamp(3.1rem, 16vw, 5.5rem);
+  font-size: clamp(3rem, 14vw, 5.4rem);
   line-height: 1;
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
   text-shadow: 0 0 30px rgba(0, 230, 176, 0.26);
+}
+
+.price-lockup p {
+  color: var(--color-text);
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  font-weight: 760;
+}
+
+.price-lockup em {
+  max-width: 34rem;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.promo-countdown {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.promo-countdown > p {
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 760;
+}
+
+.promo-countdown > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.promo-countdown span {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0.75rem 0.45rem;
+  border: 1px solid rgba(0, 216, 194, 0.32);
+  border-radius: var(--radius-sm);
+  background: rgba(2, 6, 5, 0.72);
+  box-shadow: inset 0 0 22px rgba(0, 216, 194, 0.06), 0 0 22px rgba(0, 230, 184, 0.06);
+}
+
+.promo-countdown strong {
+  color: var(--color-brand-light);
+  font-size: clamp(1.35rem, 5vw, 2rem);
+  line-height: 1;
+}
+
+.promo-countdown small {
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.promo-ended {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  font-weight: 800;
+  text-align: center;
 }
 
 .offer-card .risk-notice {

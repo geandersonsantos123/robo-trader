@@ -15,11 +15,12 @@ export function initStickyCTA({ onCommercial }) {
   const state = { methodReached: false, offerSeen: false, offerCTAVisible: false, footerVisible: false };
   const render = () => {
     const visible = state.methodReached && !state.offerCTAVisible && !state.footerVisible;
+    const expired = document.body.classList.contains("promo-expired");
     sticky.classList.toggle("is-visible", visible);
     sticky.setAttribute("aria-hidden", String(!visible));
     price.hidden = !state.offerSeen;
-    setText(kicker, state.offerSeen ? "Investimento total" : "Conheça a estrutura");
-    setText(button, state.offerSeen ? "Quero acessar" : "Ver estrutura completa");
+    setText(kicker, expired ? "Oferta encerrada" : state.offerSeen ? "Oferta especial" : "Conheça a estrutura");
+    setText(button, expired ? "Oferta encerrada" : state.offerSeen ? "Quero aproveitar" : "Ver estrutura completa");
   };
 
   if ("IntersectionObserver" in window) {
@@ -56,7 +57,7 @@ export function initStickyCTA({ onCommercial }) {
       document.querySelector("#entrega")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
       return;
     }
-    track("CTAInteraction", { cta_id: "sticky-primary", label: "Quero acessar", section: "sticky", destination: "checkout", action_type: "commercial" });
+    track("CTAInteraction", { cta_id: "sticky-primary", label: "Quero aproveitar", section: "sticky", destination: "checkout", action_type: "commercial" });
     onCommercial("sticky");
   });
 

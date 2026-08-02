@@ -5,6 +5,7 @@ import { initReveals } from "./reveal.js";
 import { initStickyCTA } from "./sticky-cta.js";
 import { initTimeline } from "./timeline.js";
 import { initGlobalOrb } from "./global-orb.js";
+import { initPromoCountdown, isPromoExpired } from "./promo-countdown.js";
 import { appendAttribution, getMarketingConsent, initTracking, setMarketingConsent, track } from "./tracking.js";
 import { initVideo } from "./video.js";
 import { select, selectAll, setText, toSafeUrl } from "./utils.js";
@@ -51,6 +52,14 @@ function initDialog() {
 
 function handleCommercialAction(sourceSection) {
   const checkout = toSafeUrl(runtimeConfig.checkoutUrl, { allowRelative: false });
+  if (isPromoExpired()) {
+    showDialog({
+      title: "Oferta encerrada",
+      message: "O prazo da oferta especial chegou ao fim. O checkout promocional não foi aberto."
+    });
+    return;
+  }
+
   if (!checkout) {
     showDialog({
       title: "Canal comercial preparado",
@@ -116,6 +125,7 @@ function init() {
   initAccordions();
   initTimeline();
   initGlobalOrb();
+  initPromoCountdown();
   initVideo({ showDialog });
   initCommercialActions();
   initStickyCTA({ onCommercial: handleCommercialAction });
