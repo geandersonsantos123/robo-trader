@@ -75,7 +75,6 @@
   .possibility .benefit-grid { grid-template-columns: 1fr; }
   .possibility .feature-card { min-height: 0; }
   .global-orb { width: clamp(22rem, 28vw, 31rem); margin-right: 0; }
-  .travel-visual img { height: clamp(18rem, 22vw, 24rem); }
 
   .pain-card { grid-template-columns: auto 1fr; min-height: 10rem; }
 
@@ -120,9 +119,15 @@
   .hero__cta { width: 100%; }
   .hero .risk-notice { order: 4; }
   .micro-grid { order: 5; }
-  .possibility__visual-stack { order: -1; }
-  .travel-visual img { height: clamp(13.75rem, 62vw, 18.75rem); }
-  .global-orb { width: clamp(17.5rem, 78vw, 21.25rem); margin-top: 0.35rem; }
+  .possibility {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgba(2, 6, 5, 0.92), rgba(2, 6, 5, 0.68) 42%, rgba(2, 6, 5, 0.96)),
+      linear-gradient(90deg, rgba(2, 6, 5, 0.94), rgba(2, 6, 5, 0.72)),
+      url("../images/visuals/traveler-working-background-mobile.webp") 56% center / cover no-repeat,
+      #020605;
+  }
+  .possibility .global-orb { width: clamp(15rem, 70vw, 19rem); margin-top: 0.35rem; opacity: 0.45; }
 }
 
 @media (min-width: 48rem) and (max-width: 59.99rem) {
