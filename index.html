@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/sections.css?v=global-orb">
+    <link rel="stylesheet" href="assets/css/sections.css?v=vsl-hero-humanoid">
     <link rel="stylesheet" href="assets/css/motion.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="module" src="assets/js/app.js"></script>
@@ -75,26 +75,41 @@
             <p class="eyebrow" data-reveal>Tecnologia configurável para mercados compatíveis</p>
             <h1 id="hero-title" data-reveal>O mercado é global. <span>Sua rotina também pode ser.</span></h1>
             <p class="lead" data-reveal>Aprenda, teste e configure uma automação que executa parâmetros definidos por você, com mais organização, flexibilidade e acompanhamento.</p>
-            <a class="button button--primary" href="#metodo" data-reveal data-cta data-cta-id="hero-understand" data-section="hero" data-destination="#metodo" data-action-type="scroll">
-              Entender como funciona <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
-            </a>
           </div>
 
-          <div class="hero-visual glass-card" role="img" aria-label="Painel visual tecnológico da marca Robô Trader" data-reveal>
-            <div class="hero-visual__screen">
-              <img src="assets/images/brand/robo-trader-logo.png" alt="" aria-hidden="true" width="220" height="255">
-              <div class="hero-visual__chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-              <p>Mercados compatíveis • Tecnologia • Controle</p>
+          <div class="video-card video-card--hero glass-card" data-reveal>
+            <div class="video-shell" data-video-shell>
+              <video
+                id="vsl-video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/images/posters/vsl-humanoid-poster.webp"
+                width="1920"
+                height="1080"
+                data-vsl-section-video
+              >
+                <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4" type="video/mp4">
+                Seu navegador não conseguiu reproduzir este vídeo.
+              </video>
+              <button class="video-play" type="button" aria-label="Reproduzir apresentação do Robô Trader" data-video-play data-cta data-cta-id="hero-video-play" data-section="hero" data-destination="vsl" data-action-type="video">
+                <svg aria-hidden="true"><use href="#icon-play"/></svg>
+              </button>
+              <p class="video-status sr-only" data-video-status>Apresentação pronta para reprodução.</p>
             </div>
           </div>
+
+          <a class="button button--primary hero__cta" href="#metodo" data-reveal data-cta data-cta-id="hero-understand" data-section="hero" data-destination="#metodo" data-action-type="scroll">
+            Entender como funciona <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
+          </a>
+
+          <p class="risk-notice" data-reveal><svg aria-hidden="true"><use href="#icon-shield"/></svg><span>Operações financeiras envolvem riscos. Nenhum resultado é garantido.</span></p>
 
           <div class="micro-grid" data-reveal-group>
             <article class="micro-card" data-reveal><svg aria-hidden="true"><use href="#icon-monitor"/></svg><span>Conta demonstrativa</span></article>
             <article class="micro-card" data-reveal><svg aria-hidden="true"><use href="#icon-cap"/></svg><span>Formação introdutória</span></article>
             <article class="micro-card" data-reveal><svg aria-hidden="true"><use href="#icon-sliders"/></svg><span>Configuração orientada</span></article>
           </div>
-
-          <p class="risk-notice" data-reveal><svg aria-hidden="true"><use href="#icon-shield"/></svg><span>Operações financeiras envolvem riscos. Nenhum resultado é garantido.</span></p>
         </div>
         <div class="roller" aria-label="Mercados compatíveis, tecnologia, conhecimento e automação configurável">
           <div class="roller__track" aria-hidden="true"><span>Mercados compatíveis • Tecnologia • Conhecimento • Automação configurável •</span><span>Mercados compatíveis • Tecnologia • Conhecimento • Automação configurável •</span></div>
@@ -171,22 +186,9 @@
             <p data-reveal>O fluxo abaixo é ilustrativo e explica o método. Ele não representa a interface final nem exibe dados financeiros.</p>
           </div>
           <div class="demonstration__grid">
-            <div class="video-card video-card--presentation glass-card" data-reveal>
-              <div class="video-shell" data-video-shell>
-                <video
-                  id="vsl-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="https://res.cloudinary.com/x5w8hleo/video/upload/so_2,q_auto,w_960/v1785458811/vsl_horizontal_com_efeitos_yoeixa.jpg"
-                  width="1920"
-                  height="1080"
-                  data-vsl-section-video
-                >
-                  <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4" type="video/mp4">
-                  Seu navegador não conseguiu reproduzir este vídeo.
-                </video>
-              </div>
+            <div class="humanoid-showcase" role="img" aria-label="Representação visual do Robô Trader em uma interface tecnológica" data-reveal>
+              <img src="assets/images/brand/robo-trader-humanoid.webp" alt="" aria-hidden="true" width="900" height="760" loading="lazy">
+              <span class="humanoid-showcase__scan" aria-hidden="true"></span>
             </div>
             <div class="benefit-list" data-reveal-group>
               <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Execução configurável</h3><p>A automação executa parâmetros definidos pelo usuário.</p></div></article>

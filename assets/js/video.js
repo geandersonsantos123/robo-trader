@@ -15,9 +15,12 @@ export function initVideo({ showDialog }) {
     if (progressBound) return;
     progressBound = true;
     const reached = new Set();
+
     video.addEventListener("play", () => {
-      track("VideoStart", { video_id: "vsl", source_section: "presentation" }, { dedupKey: "VideoStart:vsl" });
+      if (play) play.hidden = true;
+      track("VideoStart", { video_id: "vsl", source_section: "hero" }, { dedupKey: "VideoStart:vsl" });
     });
+
     video.addEventListener("timeupdate", () => {
       if (!Number.isFinite(video.duration) || video.duration <= 0) return;
       const progress = (video.currentTime / video.duration) * 100;
@@ -27,18 +30,19 @@ export function initVideo({ showDialog }) {
         track(`VideoProgress${threshold}`, { video_id: "vsl", progress: threshold }, { dedupKey: `VideoProgress:vsl:${threshold}` });
       });
     });
+
     video.addEventListener("ended", () => {
       track("VideoComplete", { video_id: "vsl", progress: 100 }, { dedupKey: "VideoComplete:vsl" });
     });
   };
 
-  if (!play) {
-    if (video.querySelector("source") || video.currentSrc || video.src) bindProgress();
-    return;
-  }
+  const inlineSource = video.querySelector("source")?.src || video.currentSrc || video.src;
+  if (inlineSource) bindProgress();
+
+  if (!play) return;
 
   play.addEventListener("click", async () => {
-    const source = toSafeUrl(runtimeConfig.videoUrl);
+    const source = toSafeUrl(runtimeConfig.videoUrl) || toSafeUrl(inlineSource);
     if (!source) {
       showDialog({
         title: "VSL preparada",
@@ -47,13 +51,14 @@ export function initVideo({ showDialog }) {
       return;
     }
 
-    if (!video.src) {
+    if (!video.currentSrc && !video.src) {
       video.src = source.href;
       video.controls = true;
-      bindProgress();
     }
+
     play.hidden = true;
     if (status) status.textContent = "Vídeo carregado após sua interação.";
+
     try {
       await video.play();
     } catch {

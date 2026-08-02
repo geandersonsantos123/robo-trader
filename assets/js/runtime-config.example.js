@@ -6,7 +6,7 @@ export const runtimeConfig = Object.freeze({
   whatsappNumber: "",
   whatsappMessage: "",
   videoUrl: "",
-  videoPoster: "assets/images/posters/vsl-placeholder.svg",
+  videoPoster: "assets/images/posters/vsl-humanoid-poster.webp",
   productName: "ROBÔ TRADER",
   productId: "robo-trader",
   price: 197,
