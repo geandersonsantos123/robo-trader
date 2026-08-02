@@ -9,7 +9,7 @@ export const runtimeConfig = Object.freeze({
   videoPoster: "assets/images/posters/vsl-humanoid-poster.webp",
   productName: "ROBÔ TRADER",
   productId: "robo-trader",
-  price: 147,
+  price: 147.9,
   regularPrice: 697.9,
   promoEndAt: "",
   currency: "BRL",
