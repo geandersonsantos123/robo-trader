@@ -259,7 +259,18 @@
 
 .possibility__layout {
   display: grid;
-  gap: 2rem;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  align-items: start;
+}
+
+.possibility__content-stack,
+.possibility__visual-stack {
+  display: grid;
+  gap: clamp(1rem, 4vw, 1.5rem);
+}
+
+.possibility__visual-stack {
+  justify-items: center;
 }
 
 .benefit-grid {
@@ -277,6 +288,46 @@
 
 .feature-card p {
   font-size: 0.92rem;
+}
+
+.travel-visual {
+  position: relative;
+  width: min(100%, 44rem);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 216, 194, 0.24);
+  border-radius: var(--radius-lg);
+  background: #020605;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48), 0 0 42px rgba(0, 216, 194, 0.1);
+}
+
+.travel-visual::before,
+.travel-visual::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.travel-visual::before {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(2, 6, 5, 0.5), transparent 17%, transparent 78%, rgba(2, 6, 5, 0.5)),
+    linear-gradient(180deg, rgba(2, 6, 5, 0.28), transparent 24%, transparent 70%, rgba(2, 6, 5, 0.48));
+}
+
+.travel-visual::after {
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(0, 230, 184, 0.08), inset 0 -45px 80px rgba(0, 230, 184, 0.08);
+}
+
+.travel-visual img {
+  display: block;
+  width: 100%;
+  height: clamp(14rem, 33vw, 24rem);
+  object-fit: cover;
+  object-position: center 52%;
 }
 
 .global-orb {
@@ -496,72 +547,43 @@
   line-height: 1.45;
 }
 
-.demonstration__grid {
-  display: grid;
-  gap: 1.5rem;
+.demonstration {
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(2, 6, 5, 0.98) 0%, rgba(2, 6, 5, 0.9) 42%, rgba(2, 6, 5, 0.82) 100%),
+    url("../images/backgrounds/circuit-network-horizontal.webp") right center / cover no-repeat,
+    linear-gradient(180deg, var(--color-bg), #03130f);
 }
 
-.humanoid-showcase {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  width: min(100%, 36rem);
-  aspect-ratio: 1.18;
-  place-items: center;
-  justify-self: center;
-  overflow: visible;
-}
-
-.humanoid-showcase::before,
-.humanoid-showcase::after {
+.demonstration::before,
+.demonstration::after {
   position: absolute;
-  z-index: -1;
-  border-radius: 50%;
+  z-index: 0;
+  inset: 0;
   content: "";
   pointer-events: none;
 }
 
-.humanoid-showcase::before {
-  inset: 14% 10% 18%;
-  background: radial-gradient(circle, rgba(0, 230, 184, 0.2), transparent 66%);
-  filter: blur(4px);
+.demonstration::before {
+  background:
+    linear-gradient(180deg, var(--color-bg), transparent 18%, transparent 82%, var(--color-bg)),
+    radial-gradient(circle at 78% 44%, rgba(0, 230, 184, 0.14), transparent 26rem);
 }
 
-.humanoid-showcase::after {
-  right: 9%;
-  bottom: 11%;
-  left: 9%;
-  height: 22%;
-  background: radial-gradient(ellipse, rgba(0, 216, 194, 0.2), transparent 68%);
+.demonstration::after {
+  background:
+    linear-gradient(rgba(0, 230, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 216, 194, 0.04) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: linear-gradient(180deg, transparent, #000 20%, #000 72%, transparent);
+  opacity: 0.5;
 }
 
-.humanoid-showcase img {
-  display: block;
-  width: min(100%, 34rem);
-  height: auto;
-  filter: drop-shadow(0 24px 70px rgba(0, 0, 0, 0.48)) drop-shadow(0 0 30px rgba(0, 230, 184, 0.15));
-  transform: translateY(0);
-  animation: humanoid-float 6s ease-in-out infinite;
-}
-
-.humanoid-showcase__scan {
-  position: absolute;
-  inset: 13% 12% 18%;
-  border: 1px solid rgba(0, 216, 194, 0.12);
-  border-radius: 50%;
-  box-shadow: inset 0 0 70px rgba(0, 230, 184, 0.06);
-  pointer-events: none;
-}
-
-@keyframes humanoid-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-0.65rem); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .humanoid-showcase img {
-    animation: none;
-  }
+.demonstration__grid {
+  display: grid;
+  gap: clamp(1rem, 4vw, 1.5rem);
+  max-width: 66rem;
+  margin-inline: auto;
 }
 
 .prototype-panel {
@@ -632,7 +654,7 @@
 
 .benefit-list {
   display: grid;
-  gap: 0.7rem;
+  gap: clamp(0.8rem, 2vw, 1rem);
 }
 
 .benefit-list article {
@@ -640,8 +662,14 @@
   grid-template-columns: auto 1fr;
   gap: 0.8rem;
   align-items: start;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--color-border-soft);
+  min-height: 100%;
+  padding: clamp(1rem, 2.8vw, 1.35rem);
+  border: 1px solid rgba(0, 216, 194, 0.2);
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, rgba(3, 12, 10, 0.82), rgba(2, 6, 5, 0.7));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 18px 48px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .benefit-list article > span {
@@ -920,12 +948,26 @@
 }
 
 .closing {
+  position: relative;
   min-height: 80svh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
   background: linear-gradient(180deg, var(--color-bg), #03130f);
   text-align: center;
+}
+
+.closing::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 5, 0.94), rgba(2, 6, 5, 0.72) 52%, rgba(2, 6, 5, 0.96)),
+    url("../images/backgrounds/circuit-network-horizontal.webp") center 62% / cover no-repeat;
+  content: "";
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .closing .section__texture--world::before {

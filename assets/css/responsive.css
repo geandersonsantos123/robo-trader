@@ -27,6 +27,7 @@
 @media (min-width: 48rem) {
   .benefit-grid,
   .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .demonstration .benefit-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .feature-card { min-height: 15rem; align-content: start; }
   .footer__grid { grid-template-columns: auto 1fr auto; align-items: center; }
   .site-footer nav { justify-content: center; }
@@ -66,18 +67,19 @@
   .micro-grid { grid-column: 2; grid-row: 3; }
 
   .possibility__layout {
-    grid-template-columns: minmax(0, 1fr) minmax(32rem, 0.95fr);
+    grid-template-columns: minmax(0, 0.88fr) minmax(30rem, 1.12fr);
     gap: clamp(1rem, 2.5vw, 2rem);
-    align-items: center;
+    align-items: start;
   }
 
-  .possibility .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .possibility .feature-card { min-height: 17rem; }
-  .global-orb { width: clamp(32rem, 39vw, 40.5rem); margin-right: -1rem; }
+  .possibility .benefit-grid { grid-template-columns: 1fr; }
+  .possibility .feature-card { min-height: 0; }
+  .global-orb { width: clamp(22rem, 28vw, 31rem); margin-right: 0; }
+  .travel-visual img { height: clamp(18rem, 22vw, 24rem); }
 
   .pain-card { grid-template-columns: auto 1fr; min-height: 10rem; }
 
-  .demonstration__grid { grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr); align-items: center; gap: 3rem; }
+  .demonstration__grid { max-width: 68rem; }
 
   .safety__grid { grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr); align-items: start; gap: 4rem; }
   .safety__grid .section-cta { grid-column: 1; margin-top: -8rem; align-self: end; }
@@ -118,8 +120,8 @@
   .hero__cta { width: 100%; }
   .hero .risk-notice { order: 4; }
   .micro-grid { order: 5; }
-  .humanoid-showcase { width: min(100%, 21.5rem); margin-block: -0.4rem 0.2rem; }
-  .humanoid-showcase img { width: min(100%, 20.5rem); }
+  .possibility__visual-stack { order: -1; }
+  .travel-visual img { height: clamp(13.75rem, 62vw, 18.75rem); }
   .global-orb { width: clamp(17.5rem, 78vw, 21.25rem); margin-top: 0.35rem; }
 }
 
