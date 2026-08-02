@@ -699,51 +699,6 @@
     linear-gradient(180deg, var(--color-bg), #030b09);
 }
 
-.proof {
-  background:
-    radial-gradient(circle at 18% 12%, rgba(0, 230, 184, 0.06), transparent 20rem),
-    linear-gradient(180deg, var(--color-bg), var(--color-bg-soft), var(--color-bg));
-}
-
-.proof-grid {
-  display: grid;
-  gap: 0.75rem;
-  counter-reset: proof;
-}
-
-.proof-grid article {
-  position: relative;
-  min-height: 13rem;
-  padding: 1.5rem;
-  overflow: clip;
-  border: 1px solid var(--color-border-soft);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, rgba(11, 24, 21, 0.92), rgba(3, 12, 10, 0.92));
-}
-
-.proof-grid article::after {
-  position: absolute;
-  right: -2rem;
-  bottom: -4.5rem;
-  width: 10rem;
-  aspect-ratio: 1;
-  border: 1px solid rgba(0, 230, 176, 0.14);
-  border-radius: 50%;
-  content: "";
-  box-shadow: inset 0 0 50px rgba(0, 230, 176, 0.05);
-}
-
-.proof-grid article > span {
-  color: var(--color-brand);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-}
-
-.proof-grid h3 {
-  margin-block: 2.2rem 0.6rem;
-}
-
 .qualification-grid {
   display: grid;
   gap: 0.85rem;
@@ -1049,9 +1004,17 @@
   font-weight: 760;
 }
 
+.price-lockup__notice {
+  max-width: 22rem;
+  color: #c7d1ce;
+  font-size: clamp(0.78rem, 1.5vw, 0.88rem);
+  line-height: 1.35;
+}
+
 .promo-countdown {
   display: grid;
-  gap: 0.65rem;
+  justify-items: center;
+  gap: 0.55rem;
   text-align: center;
 }
 
@@ -1061,35 +1024,21 @@
   font-weight: 820;
 }
 
-.promo-countdown > div {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.45rem, 1.6vw, 0.6rem);
-}
-
-.promo-countdown span {
-  display: grid;
-  gap: 0.25rem;
-  min-width: 0;
-  padding: clamp(0.58rem, 1.8vw, 0.82rem) 0.4rem;
+.promo-countdown__clock {
+  display: inline-flex;
+  min-width: min(100%, 14rem);
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.72rem, 2vw, 0.9rem) clamp(1rem, 3vw, 1.35rem);
   border: 1px solid rgba(0, 216, 194, 0.28);
   border-radius: var(--radius-sm);
   background: rgba(2, 6, 5, 0.72);
-  box-shadow: inset 0 0 22px rgba(0, 216, 194, 0.06), 0 0 22px rgba(0, 230, 184, 0.06);
-}
-
-.promo-countdown strong {
   color: var(--color-brand-light);
-  font-size: clamp(1.35rem, 3.2vw, 1.95rem);
+  font-size: clamp(1.7rem, 4.2vw, 2.45rem);
+  font-weight: 850;
+  letter-spacing: 0;
   line-height: 1;
-}
-
-.promo-countdown small {
-  color: var(--color-text);
-  font-size: clamp(0.58rem, 1.3vw, 0.64rem);
-  font-weight: 760;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  box-shadow: inset 0 0 22px rgba(0, 216, 194, 0.06), 0 0 22px rgba(0, 230, 184, 0.06);
 }
 
 .promo-ended {
@@ -1191,12 +1140,10 @@
     gap: 0.5rem;
   }
 
-  .promo-countdown span {
-    padding-block: 0.55rem;
-  }
-
-  .promo-countdown strong {
-    font-size: 1.55rem;
+  .promo-countdown__clock {
+    min-width: 12rem;
+    padding-block: 0.7rem;
+    font-size: 1.7rem;
   }
 
   .offer-button {
@@ -1259,37 +1206,6 @@
 
 }
 
-.safety__grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.safety-list {
-  display: grid;
-  gap: 0.2rem;
-  list-style: none;
-}
-
-.safety-list li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.8rem;
-  align-items: start;
-  padding-block: 1rem;
-  border-bottom: 1px solid var(--color-border-soft);
-  color: var(--color-muted);
-}
-
-.safety-list svg {
-  width: 1.4rem;
-  height: 1.4rem;
-  color: var(--color-brand);
-}
-
-.safety-list strong {
-  color: var(--color-text);
-}
-
 .accordion--faq {
   max-width: 52rem;
 }
@@ -1313,48 +1229,4 @@
 .accordion--faq .accordion__panel {
   max-width: 45rem;
   padding: 0 2.5rem 1.3rem 0;
-}
-
-.closing {
-  position: relative;
-  min-height: 80svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
-  background: linear-gradient(180deg, var(--color-bg), #03130f);
-  text-align: center;
-}
-
-.closing::before {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(2, 6, 5, 0.94), rgba(2, 6, 5, 0.72) 52%, rgba(2, 6, 5, 0.96)),
-    url("../images/backgrounds/circuit-network-horizontal.webp") center 62% / cover no-repeat;
-  content: "";
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.closing .section__texture--world::before {
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.closing__content {
-  display: grid;
-  justify-items: center;
-  gap: 1.25rem;
-}
-
-.closing__content h2 {
-  max-width: 16ch;
-}
-
-.closing__content > p:not(.eyebrow, .risk-notice) {
-  max-width: 38rem;
-  font-size: clamp(1rem, 3vw, 1.2rem);
 }

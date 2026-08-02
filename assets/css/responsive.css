@@ -25,8 +25,7 @@
 }
 
 @media (min-width: 48rem) {
-  .benefit-grid,
-  .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .demonstration .benefit-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .feature-card { min-height: 15rem; align-content: start; }
   .footer__grid { grid-template-columns: auto 1fr auto; align-items: center; }
@@ -80,9 +79,6 @@
 
   .demonstration__grid { max-width: 68rem; }
 
-  .safety__grid { grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr); align-items: start; gap: 4rem; }
-  .safety__grid .section-cta { grid-column: 1; margin-top: -8rem; align-self: end; }
-
   .button { padding-inline: 1.5rem; }
 }
 
@@ -114,7 +110,26 @@
 }
 
 @media (max-width: 47.99rem) {
+  .header-countdown {
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    right: var(--gutter);
+    left: var(--gutter);
+    justify-content: center;
+    width: auto;
+    min-height: 2.1rem;
+    margin: 0;
+    padding: 0.35rem 0.55rem;
+    background: rgba(2, 6, 5, 0.9);
+    font-size: 0.68rem;
+  }
+
+  .header-countdown strong {
+    font-size: 0.82rem;
+  }
+
   .sticky-cta { display: grid; }
+  .hero { padding-top: calc(var(--header-height) + 4.75rem); }
   .video-card--hero { width: 100%; }
   .hero__cta { width: 100%; }
   .hero__copy h1 { max-width: 100%; font-size: clamp(2rem, 8.4vw, 2.35rem); }

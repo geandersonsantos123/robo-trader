@@ -11,7 +11,6 @@ export const runtimeConfig = Object.freeze({
   productId: "robo-trader",
   price: 147.9,
   regularPrice: 697.9,
-  promoEndAt: "",
   currency: "BRL",
   companyName: "",
   supportEmail: "",

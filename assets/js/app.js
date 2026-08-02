@@ -54,8 +54,8 @@ function handleCommercialAction(sourceSection) {
   const checkout = toSafeUrl(runtimeConfig.checkoutUrl, { allowRelative: false });
   if (isPromoExpired()) {
     showDialog({
-      title: "Oferta encerrada",
-      message: "O prazo da oferta especial chegou ao fim. O checkout promocional não foi aberto."
+      title: "Condição promocional encerrada",
+      message: "O prazo da condição promocional chegou ao fim. O checkout promocional não foi aberto."
     });
     return;
   }
@@ -108,14 +108,6 @@ function initConsent() {
   if (runtimeConfig.consentRequired && getMarketingConsent() === "unset") show();
 }
 
-function initOptionalProof() {
-  const region = select("[data-optional-testimonials]");
-  if (!region) return;
-  const canShow = runtimeConfig.showTestimonials && region.children.length > 0;
-  region.hidden = !canShow;
-  region.setAttribute("aria-hidden", String(!canShow));
-}
-
 function init() {
   document.documentElement.classList.remove("no-js");
   initDialog();
@@ -129,7 +121,6 @@ function init() {
   initVideo({ showDialog });
   initCommercialActions();
   initStickyCTA({ onCommercial: handleCommercialAction });
-  initOptionalProof();
   initReveals();
 }
 
