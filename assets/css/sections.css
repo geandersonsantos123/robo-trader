@@ -22,6 +22,22 @@
   gap: 1.35rem;
 }
 
+.hero__copy h1 {
+  max-width: 18ch;
+  font-size: clamp(2.45rem, 7.2vw, 3.55rem);
+}
+
+.hero-title__line {
+  display: block;
+  background: none;
+  color: var(--color-text);
+  -webkit-text-fill-color: currentColor;
+}
+
+.hero-title__line--accent {
+  color: var(--color-brand-light);
+}
+
 .hero__copy .button {
   margin-top: 0.35rem;
 }

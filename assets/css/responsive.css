@@ -117,6 +117,9 @@
   .sticky-cta { display: grid; }
   .video-card--hero { width: 100%; }
   .hero__cta { width: 100%; }
+  .hero__copy h1 { max-width: 100%; font-size: clamp(2rem, 8.4vw, 2.35rem); }
+  .hero-title__line { display: inline; }
+  .hero-title__line--accent { display: block; }
   .hero .risk-notice { order: 4; }
   .micro-grid { order: 5; }
   .possibility {
