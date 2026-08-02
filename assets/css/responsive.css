@@ -64,12 +64,14 @@
   .hero .risk-notice { grid-column: 2; }
 
   .possibility__layout {
-    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+    grid-template-columns: minmax(0, 1fr) minmax(32rem, 0.95fr);
+    gap: clamp(1rem, 2.5vw, 2rem);
     align-items: center;
   }
 
   .possibility .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .possibility .feature-card { min-height: 17rem; }
+  .global-orb { width: clamp(32rem, 39vw, 40.5rem); margin-right: -1rem; }
 
   .pain-card { grid-template-columns: auto 1fr; min-height: 10rem; }
 
@@ -110,6 +112,11 @@
 
 @media (max-width: 47.99rem) {
   .sticky-cta { display: grid; }
+  .global-orb { width: clamp(17.5rem, 78vw, 21.25rem); margin-top: 0.35rem; }
+}
+
+@media (min-width: 48rem) and (max-width: 59.99rem) {
+  .global-orb { width: clamp(23rem, 58vw, 31rem); }
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {

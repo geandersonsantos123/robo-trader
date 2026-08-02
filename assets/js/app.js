@@ -4,6 +4,7 @@ import { initNavigation } from "./navigation.js";
 import { initReveals } from "./reveal.js";
 import { initStickyCTA } from "./sticky-cta.js";
 import { initTimeline } from "./timeline.js";
+import { initGlobalOrb } from "./global-orb.js";
 import { appendAttribution, getMarketingConsent, initTracking, setMarketingConsent, track } from "./tracking.js";
 import { initVideo } from "./video.js";
 import { select, selectAll, setText, toSafeUrl } from "./utils.js";
@@ -114,6 +115,7 @@ function init() {
   initNavigation();
   initAccordions();
   initTimeline();
+  initGlobalOrb();
   initVideo({ showDialog });
   initCommercialActions();
   initStickyCTA({ onCommercial: handleCommercialAction });

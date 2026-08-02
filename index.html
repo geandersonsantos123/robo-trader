@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/sections.css?v=brand-refresh">
+    <link rel="stylesheet" href="assets/css/sections.css?v=global-orb">
     <link rel="stylesheet" href="assets/css/motion.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="module" src="assets/js/app.js"></script>
@@ -115,7 +115,10 @@
               <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pulse"/></svg></span><h3>Contexto internacional</h3><p>Estude ativos e operações relacionados a moedas internacionais com responsabilidade.</p></article>
               <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span><h3>Rotina flexível</h3><p>Organize estudo e acompanhamento de acordo com a sua rotina e seus limites.</p></article>
             </div>
-            <div class="globe-visual" aria-label="Ilustração abstrata de conexões globais" role="img" data-reveal><span></span><i></i><i></i><i></i><i></i></div>
+            <div class="global-orb" aria-label="Globo digital com conexões globais" role="img" data-global-orb data-reveal>
+              <canvas class="global-orb__canvas" width="720" height="720" aria-hidden="true"></canvas>
+              <div class="global-orb__fallback" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <a class="button button--primary section-cta" href="#metodo" data-reveal data-cta data-cta-id="possibility-proposal" data-section="possibilidade" data-destination="#metodo" data-action-type="scroll">Conhecer a proposta <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
