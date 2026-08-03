@@ -60,7 +60,7 @@
   }
 
   .hero__copy { grid-column: 1; grid-row: 1; }
-  .video-card--hero { grid-column: 2; grid-row: 1 / span 2; }
+  .hero-video-stack { grid-column: 2; grid-row: 1 / span 2; }
   .hero__cta { grid-column: 1; grid-row: 2; align-self: start; }
   .hero .risk-notice { grid-column: 1; grid-row: 3; justify-self: start; }
   .micro-grid { grid-column: 2; grid-row: 3; }
@@ -130,7 +130,9 @@
 
   .sticky-cta { display: grid; }
   .hero { padding-top: calc(var(--header-height) + 4.75rem); }
+  .hero-video-stack,
   .video-card--hero { width: 100%; }
+  .video-callout { width: min(100%, 15rem); }
   .hero__cta { width: 100%; }
   .hero__copy h1 { max-width: 100%; font-size: clamp(2rem, 8.4vw, 2.35rem); }
   .hero-title__line { display: inline; }
