@@ -16,7 +16,7 @@ export function initStickyCTA() {
     const visible = state.methodReached && !state.offerCTAVisible && !state.footerVisible;
     sticky.classList.toggle("is-visible", visible);
     sticky.setAttribute("aria-hidden", String(!visible));
-    setText(kicker, document.body.classList.contains("promo-expired") ? "Condição promocional encerrada" : "OFERTA LIMITADA • 1 HORA");
+    setText(kicker, "OFERTA LIMITADA • 1 HORA");
     setText(button, "Comprar agora");
   };
 

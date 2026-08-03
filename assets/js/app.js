@@ -5,7 +5,7 @@ import { initReveals } from "./reveal.js";
 import { initStickyCTA } from "./sticky-cta.js";
 import { initTimeline } from "./timeline.js";
 import { initGlobalOrb } from "./global-orb.js";
-import { initPromoCountdown, isPromoExpired } from "./promo-countdown.js";
+import { initPromoCountdown } from "./promo-countdown.js";
 import { appendAttribution, getMarketingConsent, initTracking, setMarketingConsent, track } from "./tracking.js";
 import { initVideo } from "./video.js";
 import { select, selectAll, setText, toSafeUrl } from "./utils.js";
@@ -52,13 +52,6 @@ function initDialog() {
 
 function handleCommercialAction(sourceSection) {
   const checkout = toSafeUrl(runtimeConfig.checkoutUrl, { allowRelative: false });
-  if (isPromoExpired()) {
-    showDialog({
-      title: "Condição promocional encerrada",
-      message: "O prazo da condição promocional chegou ao fim. O checkout promocional não foi aberto."
-    });
-    return;
-  }
 
   if (!checkout) {
     showDialog({

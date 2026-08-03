@@ -3,6 +3,7 @@ import { selectAll, setText } from "./utils.js";
 const DURATION_MS = 60 * 60 * 1000;
 const STORAGE_KEY = "roboTraderPromoEndAt";
 let fallbackEndAt = null;
+let activeEndAt = null;
 
 const pad = (value) => String(value).padStart(2, "0");
 
@@ -17,18 +18,29 @@ function readStoredEndAt() {
   return Number.isFinite(endAt) && endAt > 0 ? endAt : null;
 }
 
-function ensureEndAt() {
-  const storedEndAt = readStoredEndAt();
-  if (storedEndAt) return storedEndAt;
-
-  const endAt = Date.now() + DURATION_MS;
+function writeEndAt(endAt) {
   fallbackEndAt = String(endAt);
+  activeEndAt = endAt;
   try {
     window.localStorage?.setItem(STORAGE_KEY, fallbackEndAt);
   } catch {
     /* Storage can be unavailable in restricted browser contexts. */
   }
   return endAt;
+}
+
+function createEndAt() {
+  return writeEndAt(Date.now() + DURATION_MS);
+}
+
+function ensureEndAt() {
+  const storedEndAt = readStoredEndAt();
+  if (storedEndAt && storedEndAt > Date.now()) {
+    activeEndAt = storedEndAt;
+    return storedEndAt;
+  }
+
+  return createEndAt();
 }
 
 function getRemaining(endAt) {
@@ -51,41 +63,24 @@ function render(state) {
   });
 }
 
-function setExpired() {
-  document.body.classList.add("promo-expired");
-  selectAll("[data-promo-countdown]").forEach((root) => root.classList.add("is-expired"));
-  selectAll("[data-offer-cta]").forEach((button) => {
-    button.disabled = true;
-    button.setAttribute("aria-disabled", "true");
-    setText(button, "Condição promocional encerrada");
-  });
-  selectAll("[data-promo-ended]").forEach((element) => {
-    element.hidden = false;
-  });
-}
-
-export function isPromoExpired() {
-  const endAt = readStoredEndAt();
-  return Boolean(endAt && Date.now() >= endAt);
+function restartCountdown() {
+  activeEndAt = createEndAt();
+  window.setTimeout(() => {
+    render(getRemaining(activeEndAt));
+  }, 250);
 }
 
 export function initPromoCountdown() {
   const clocks = selectAll("[data-countdown-clock]");
   if (!clocks.length) return;
 
-  const endAt = ensureEndAt();
+  activeEndAt = ensureEndAt();
   const tick = () => {
-    const state = getRemaining(endAt);
+    const state = getRemaining(activeEndAt);
     render(state);
-    if (state.remaining <= 0) {
-      setExpired();
-      return false;
-    }
-    return true;
+    if (state.remaining <= 0) restartCountdown();
   };
 
-  if (!tick()) return;
-  const interval = window.setInterval(() => {
-    if (!tick()) window.clearInterval(interval);
-  }, 1000);
+  tick();
+  window.setInterval(tick, 1000);
 }
