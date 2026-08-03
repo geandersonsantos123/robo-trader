@@ -1,10 +1,10 @@
 import { runtimeConfig } from "./runtime-config.js";
 import { track } from "./tracking.js";
-import { select, toSafeUrl } from "./utils.js";
+import { select, selectAll, toSafeUrl } from "./utils.js";
 
 export function initVideo({ showDialog }) {
   const video = select("#vsl-video");
-  const play = select("[data-video-play]");
+  const playButtons = selectAll("[data-video-play]");
   const status = select("[data-video-status]");
   if (!video) return;
 
@@ -17,7 +17,9 @@ export function initVideo({ showDialog }) {
     const reached = new Set();
 
     video.addEventListener("play", () => {
-      if (play) play.hidden = true;
+      playButtons.forEach((button) => {
+        button.hidden = true;
+      });
       track("VideoStart", { video_id: "vsl", source_section: "hero" }, { dedupKey: "VideoStart:vsl" });
     });
 
@@ -39,9 +41,9 @@ export function initVideo({ showDialog }) {
   const inlineSource = video.querySelector("source")?.src || video.currentSrc || video.src;
   if (inlineSource) bindProgress();
 
-  if (!play) return;
+  if (!playButtons.length) return;
 
-  play.addEventListener("click", async () => {
+  const handlePlayClick = async () => {
     const source = toSafeUrl(runtimeConfig.videoUrl) || toSafeUrl(inlineSource);
     if (!source) {
       showDialog({
@@ -56,14 +58,22 @@ export function initVideo({ showDialog }) {
       video.controls = true;
     }
 
-    play.hidden = true;
+    playButtons.forEach((button) => {
+      button.hidden = true;
+    });
     if (status) status.textContent = "Vídeo carregado após sua interação.";
 
     try {
       await video.play();
     } catch {
-      play.hidden = false;
+      playButtons.forEach((button) => {
+        button.hidden = false;
+      });
       if (status) status.textContent = "Não foi possível iniciar o vídeo. Use os controles do player ou tente novamente.";
     }
+  };
+
+  playButtons.forEach((button) => {
+    button.addEventListener("click", handlePlayClick);
   });
 }
