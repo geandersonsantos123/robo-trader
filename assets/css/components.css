@@ -30,7 +30,7 @@ html.preloader-pending body {
   color: var(--color-text);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms ease, visibility 180ms ease;
+  transition: opacity 220ms ease-in-out, visibility 220ms ease-in-out;
   visibility: hidden;
 }
 
@@ -122,7 +122,7 @@ html.preloader-pending body {
   width: min(100%, 28rem);
   gap: 1.05rem;
   text-align: center;
-  animation: preloader-enter 520ms var(--ease-out) both;
+  animation: preloader-enter 620ms ease-in-out both;
 }
 
 .preloader__hud {
@@ -179,7 +179,7 @@ html.preloader-pending body {
 }
 
 .site-preloader.is-ready .preloader__logo {
-  animation: preloader-pulse 220ms ease-out 1;
+  animation: preloader-pulse 260ms ease-in-out 1;
 }
 
 .preloader__status {
@@ -219,7 +219,7 @@ html.preloader-pending body {
   box-shadow: 0 0 18px rgba(0, 230, 184, 0.55);
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform 80ms linear;
+  transition: transform 160ms ease-in-out;
 }
 
 .preloader__progress span::after {

@@ -1,10 +1,10 @@
 import { select, setText } from "./utils.js";
 
 const STORAGE_KEY = "roboTraderPreloaderShown";
-const MIN_VISIBLE_MS = 800;
+const MIN_VISIBLE_MS = 1800;
 const READY_PULSE_MS = 220;
-const EXIT_FADE_MS = 140;
-const NORMAL_PROGRESS_MS = 1250;
+const EXIT_FADE_MS = 120;
+const NORMAL_PROGRESS_MS = 1800;
 
 function delay(ms) {
   return new Promise((resolve) => window.setTimeout(resolve, ms));
@@ -37,6 +37,10 @@ function setProgress(bar, percent, value) {
   setText(percent, `${nextValue}%`);
 }
 
+function easeInOut(progress) {
+  return progress < 0.5 ? 2 * progress * progress : 1 - ((-2 * progress + 2) ** 2) / 2;
+}
+
 export function initPreloader() {
   const root = document.documentElement;
   const preloader = select("[data-preloader]");
@@ -60,8 +64,9 @@ export function initPreloader() {
   const animateProgress = (timestamp) => {
     if (completed) return;
     const elapsed = timestamp - startedAt;
-    const softCap = reducedMotion ? 88 : 96;
-    const nextProgress = Math.min(softCap, (elapsed / NORMAL_PROGRESS_MS) * softCap);
+    const softCap = reducedMotion ? 88 : 98;
+    const progress = Math.min(1, elapsed / NORMAL_PROGRESS_MS);
+    const nextProgress = easeInOut(progress) * softCap;
     setProgress(bar, percent, nextProgress);
     frame = window.requestAnimationFrame(animateProgress);
   };
