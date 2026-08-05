@@ -14,6 +14,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Robô Trader | Tecnologia global com controle humano">
     <meta name="twitter:description" content="Aprenda, teste, configure e acompanhe uma automação definida por você.">
+    <script>
+      (() => {
+        try {
+          if (sessionStorage.getItem("roboTraderPreloaderShown") !== "true") {
+            document.documentElement.classList.add("preloader-pending");
+          }
+        } catch {
+          document.documentElement.classList.add("preloader-pending");
+        }
+      })();
+    </script>
     <link rel="icon" href="assets/images/brand/robo-trader-mark.png" type="image/png">
     <link rel="stylesheet" href="assets/css/tokens.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -26,6 +37,23 @@
     <script type="module" src="assets/js/app.js"></script>
   </head>
   <body>
+    <div class="site-preloader" data-preloader role="status" aria-live="polite" aria-busy="true" aria-label="Iniciando sistema do Robô Trader">
+      <div class="preloader__circuit" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="preloader__panel">
+        <div class="preloader__hud" aria-hidden="true">
+          <span class="preloader__ring preloader__ring--outer"></span>
+          <span class="preloader__ring preloader__ring--inner"></span>
+          <span class="preloader__scan"></span>
+        </div>
+        <img class="preloader__logo" src="assets/images/brand/robo-trader-logo-horizontal.png" alt="Robô Trader" width="260" height="81">
+        <p class="preloader__status" data-preloader-status>INICIANDO SISTEMA</p>
+        <div class="preloader__progress-row">
+          <div class="preloader__progress" aria-hidden="true"><span data-preloader-bar></span></div>
+          <output class="preloader__percent" data-preloader-percent aria-label="Progresso">0%</output>
+        </div>
+      </div>
+    </div>
+
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <svg class="svg-sprite" aria-hidden="true">
@@ -48,6 +76,8 @@
       <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
       <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3 8-8 10-5-2-8-5-8-10V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
       <symbol id="icon-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h2M12 15h4"/></symbol>
+      <symbol id="icon-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16 7c-1-1-2-1.5-4-1.5-2.5 0-4 1.1-4 2.8 0 1.8 1.7 2.4 4 3 2.6.6 4 1.3 4 3.2s-1.7 3-4.2 3c-2 0-3.4-.6-4.8-1.8"/></symbol>
+      <symbol id="icon-trend" viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 7-8"/><path d="M15 7h5v5"/></symbol>
       <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
     </svg>
 
@@ -159,6 +189,64 @@
           <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="possibility-offer" data-section="possibilidade" data-destination="#oferta" data-action-type="scroll">Ver a condição especial <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
         <div class="roller roller--reverse" aria-label="Flexibilidade, mercados globais, organização e autonomia"><div class="roller__track" aria-hidden="true"><span>Flexibilidade • Mercados globais • Organização • Autonomia •</span><span>Flexibilidade • Mercados globais • Organização • Autonomia •</span></div></div>
+      </section>
+
+      <section class="section global-markets" id="mercados-globais" aria-labelledby="global-markets-title">
+        <div class="section__texture section__texture--world" aria-hidden="true"></div>
+        <div class="container">
+          <div class="global-markets__intro">
+            <div class="section-heading global-markets__heading" data-reveal-group>
+              <p class="eyebrow" data-reveal>ATIVOS GLOBAIS E MERCADOS INTERNACIONAIS</p>
+              <h2 id="global-markets-title" data-reveal>Operações em <span>mercados globais</span></h2>
+              <p data-reveal>Acompanhe oportunidades ligadas ao dólar e a diferentes ativos internacionais de forma simples, organizada e com mais possibilidades de operação.</p>
+            </div>
+            <div class="market-panel" data-reveal aria-hidden="true">
+              <img class="market-panel__image" src="assets/images/markets/market-panel.webp" alt="" loading="lazy" decoding="async">
+              <div class="market-panel__globe"><span></span><i></i><i></i><i></i></div>
+              <div class="market-panel__callout glass-card">
+                <span><svg aria-hidden="true"><use href="#icon-globe"/></svg></span>
+                <strong>Mercados ligados<br>ao dólar</strong>
+              </div>
+              <div class="market-panel__candles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="market-panel__bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <svg class="market-panel__line" viewBox="0 0 760 260" aria-hidden="true">
+                <path d="M18 210 C82 204 105 156 158 168 C214 182 232 205 290 140 C348 76 394 118 448 94 C508 67 540 91 584 58 C636 19 688 36 742 16"/>
+                <path d="M18 210 C82 204 105 156 158 168 C214 182 232 205 290 140 C348 76 394 118 448 94 C508 67 540 91 584 58 C636 19 688 36 742 16"/>
+              </svg>
+              <div class="market-panel__scan"></div>
+            </div>
+          </div>
+
+          <div class="market-highlights" data-reveal-group>
+            <article class="market-highlight glass-card" data-reveal><span><svg aria-hidden="true"><use href="#icon-dollar"/></svg></span><div><h3>Ativos em dólar</h3><p>Exposição a mercados ligados à moeda mais forte do mundo.</p></div></article>
+            <article class="market-highlight glass-card" data-reveal><span><svg aria-hidden="true"><use href="#icon-globe"/></svg></span><div><h3>Mercados internacionais</h3><p>Diversifique sua atuação com diferentes ativos globais.</p></div></article>
+            <article class="market-highlight glass-card" data-reveal><span><svg aria-hidden="true"><use href="#icon-trend"/></svg></span><div><h3>Mais possibilidades de operação</h3><p>Explore diferentes cenários, estratégias e oportunidades.</p></div></article>
+          </div>
+
+          <div class="asset-carousel" data-asset-carousel data-reveal>
+            <div class="asset-carousel__header">
+              <p>Ativos acompanhados</p>
+              <div class="asset-carousel__controls" aria-label="Navegação do carrossel de ativos">
+                <button type="button" aria-label="Ver ativos anteriores" data-carousel-prev><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+                <button type="button" aria-label="Ver próximos ativos" data-carousel-next><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+              </div>
+            </div>
+            <div class="asset-carousel__viewport" data-carousel-viewport>
+              <div class="asset-carousel__track" data-carousel-track>
+                <article class="asset-card asset-card--currency" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-usd-eur.webp" alt="" loading="lazy" decoding="async"></div><small>Mercado cambial</small><h3>USD/EUR</h3><p>Acompanhe um dos pares de moedas mais conhecidos do mercado.</p></article>
+                <article class="asset-card asset-card--bitcoin" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-bitcoin.webp" alt="" loading="lazy" decoding="async"></div><small>Criptoativo</small><h3>Bitcoin</h3><p>Exposição a um dos ativos digitais mais acompanhados do mundo.</p></article>
+                <article class="asset-card asset-card--gold" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-gold.webp" alt="" loading="lazy" decoding="async"></div><small>Metal global</small><h3>Ouro</h3><p>Um ativo tradicional observado em diversos cenários econômicos.</p></article>
+                <article class="asset-card asset-card--forex" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-forex.webp" alt="" loading="lazy" decoding="async"></div><small>Pares internacionais</small><h3>Forex</h3><p>Operações ligadas às oscilações entre moedas globais.</p></article>
+                <article class="asset-card asset-card--indices" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-indices.webp" alt="" loading="lazy" decoding="async"></div><small>Movimentos globais</small><h3>Índices</h3><p>Acompanhe tendências de mercados e economias internacionais.</p></article>
+              </div>
+            </div>
+            <div class="asset-carousel__progress" aria-hidden="true"><span data-carousel-progress></span></div>
+            <div class="asset-carousel__dots" data-carousel-dots aria-label="Indicadores do carrossel de ativos"></div>
+          </div>
+
+          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="markets-offer" data-section="mercados-globais" data-destination="#oferta" data-action-type="scroll">Conheça a estrutura <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        </div>
+        <div class="roller" aria-label="Dólar, forex, ouro, bitcoin, cripto e índices"><div class="roller__track" aria-hidden="true"><span>Dólar • Forex • Ouro • Bitcoin • Cripto • Índices •</span><span>Dólar • Forex • Ouro • Bitcoin • Cripto • Índices •</span></div></div>
       </section>
 
       <section class="section pain" id="desafio" aria-labelledby="pain-title">

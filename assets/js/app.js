@@ -1,10 +1,12 @@
 import { runtimeConfig } from "./runtime-config.js";
 import { initAccordions } from "./faq.js";
+import { initAssetCarousel } from "./asset-carousel.js";
 import { initNavigation } from "./navigation.js";
 import { initReveals } from "./reveal.js";
 import { initStickyCTA } from "./sticky-cta.js";
 import { initTimeline } from "./timeline.js";
 import { initGlobalOrb } from "./global-orb.js";
+import { initPreloader } from "./preloader.js";
 import { initPromoCountdown } from "./promo-countdown.js";
 import { appendAttribution, getMarketingConsent, initTracking, setMarketingConsent, track } from "./tracking.js";
 import { initVideo } from "./video.js";
@@ -103,11 +105,13 @@ function initConsent() {
 
 function init() {
   document.documentElement.classList.remove("no-js");
+  initPreloader();
   initDialog();
   initTracking();
   initConsent();
   initNavigation();
   initAccordions();
+  initAssetCarousel();
   initTimeline();
   initGlobalOrb();
   initPromoCountdown();
