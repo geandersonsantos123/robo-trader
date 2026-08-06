@@ -1,6 +1,7 @@
 import { runtimeConfig } from "./runtime-config.js";
 import { initAccordions } from "./faq.js";
 import { initAssetCarousel } from "./asset-carousel.js";
+import { initCertificatePreview } from "./certificate-preview.js";
 import { initNavigation } from "./navigation.js";
 import { initReveals } from "./reveal.js";
 import { initStickyCTA } from "./sticky-cta.js";
@@ -112,6 +113,7 @@ function init() {
   initNavigation();
   initAccordions();
   initAssetCarousel();
+  initCertificatePreview();
   initTimeline();
   initGlobalOrb();
   initPromoCountdown();

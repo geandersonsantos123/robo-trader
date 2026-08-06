@@ -336,6 +336,31 @@
         <div class="roller roller--reverse" aria-label="Tecnologia, formação, conta demonstrativa, onboarding e suporte"><div class="roller__track" aria-hidden="true"><span>Tecnologia • Formação • Conta demonstrativa • Onboarding • Suporte •</span><span>Tecnologia • Formação • Conta demonstrativa • Onboarding • Suporte •</span></div></div>
       </section>
 
+      <section class="section certificate" id="certificado" aria-labelledby="certificate-title">
+        <div class="section__texture section__texture--world" aria-hidden="true"></div>
+        <div class="container certificate__grid">
+          <div class="certificate__copy" data-reveal-group>
+            <p class="eyebrow" data-reveal>Certificação</p>
+            <h2 id="certificate-title" data-reveal>Receba seu certificado de <span>conclusão</span></h2>
+            <p data-reveal>Ao concluir o conteúdo do Robô Trader, você recebe um certificado digital de conclusão para comprovar sua participação no treinamento.</p>
+            <ul class="certificate__list" data-reveal>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Certificado digital</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Entrega após a conclusão</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Visual exclusivo Robô Trader</li>
+            </ul>
+            <p class="certificate__note" data-reveal>Conclua o treinamento e desbloqueie seu certificado.</p>
+          </div>
+
+          <div class="certificate__media" data-reveal>
+            <button class="certificate-preview glass-card" type="button" data-certificate-open aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Ampliar prévia do certificado de conclusão">
+              <span class="certificate-preview__badge"><svg aria-hidden="true"><use href="#icon-cap"/></svg>Certificado digital</span>
+              <img src="https://res.cloudinary.com/x5w8hleo/image/upload/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Miniatura do certificado de conclusão do Robô Trader" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="certificate-preview__hint">Clique para ampliar</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section class="section qualification" id="compatibilidade" aria-labelledby="qualification-title">
         <div class="container">
           <div class="section-heading" data-reveal-group>
@@ -484,6 +509,15 @@
       <h2 id="integration-title">Integração preparada</h2>
       <p data-dialog-message>O canal oficial será conectado na versão de publicação. Nenhuma ação comercial real foi iniciada.</p>
       <button class="button button--secondary" type="button" data-dialog-return>Voltar à página</button>
+    </dialog>
+
+    <dialog class="certificate-dialog" id="certificate-dialog" aria-labelledby="certificate-dialog-title" data-certificate-dialog>
+      <button class="dialog-close" type="button" data-certificate-close aria-label="Fechar prévia do certificado"><svg aria-hidden="true"><use href="#icon-close"/></svg></button>
+      <div class="certificate-dialog__content">
+        <p class="eyebrow">Certificação</p>
+        <h2 id="certificate-dialog-title">Certificado de conclusão</h2>
+        <img src="https://res.cloudinary.com/x5w8hleo/image/upload/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Certificado de conclusão do Robô Trader ampliado" width="1280" height="720" loading="lazy" decoding="async">
+      </div>
     </dialog>
 
     <aside class="consent-banner glass-card" data-consent-banner hidden aria-labelledby="consent-title">
