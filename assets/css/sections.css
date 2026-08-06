@@ -2171,6 +2171,266 @@
 
 }
 
+.purchase-security {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 48%, rgba(0, 230, 184, 0.11), transparent 30rem),
+    radial-gradient(circle at 78% 42%, rgba(0, 205, 232, 0.09), transparent 28rem),
+    linear-gradient(180deg, #020605, #06100e 58%, #020605);
+}
+
+.purchase-security .section__texture--world::before {
+  top: -1rem;
+  right: -10%;
+  opacity: 0.13;
+}
+
+.purchase-security__card {
+  position: relative;
+  display: grid;
+  gap: clamp(1.45rem, 4vw, 2.4rem);
+  overflow: hidden;
+  padding: clamp(1.2rem, 4vw, 2.35rem);
+  border-color: rgba(0, 216, 194, 0.36);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(145deg, rgba(0, 230, 184, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(7, 21, 18, 0.95), rgba(2, 6, 5, 0.94));
+  box-shadow: var(--shadow-card), 0 0 52px rgba(0, 230, 184, 0.09);
+}
+
+.purchase-security__card::before,
+.purchase-security__card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.purchase-security__card::before {
+  background:
+    linear-gradient(rgba(0, 216, 194, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 205, 232, 0.035) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  mask-image: radial-gradient(circle at 70% 38%, #000, transparent 72%);
+  opacity: 0.74;
+}
+
+.purchase-security__card::after {
+  background:
+    radial-gradient(circle at 13% 16%, rgba(0, 230, 184, 0.16), transparent 11rem),
+    radial-gradient(circle at 88% 82%, rgba(0, 205, 232, 0.12), transparent 16rem),
+    linear-gradient(90deg, transparent, rgba(0, 230, 184, 0.055), transparent);
+  opacity: 0.75;
+}
+
+.purchase-security__halo {
+  position: absolute;
+  top: clamp(1.5rem, 6vw, 3rem);
+  right: clamp(-5rem, -8vw, -2rem);
+  width: min(34rem, 72vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 216, 194, 0.15);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(0, 230, 184, 0.08), transparent 54%),
+    repeating-radial-gradient(circle, rgba(0, 216, 194, 0.13) 0 1px, transparent 1px 5.2rem);
+  opacity: 0.68;
+  pointer-events: none;
+}
+
+.purchase-security__intro,
+.purchase-security__grid,
+.purchase-security__footer {
+  position: relative;
+  z-index: 1;
+}
+
+.purchase-security__intro {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 43rem;
+}
+
+.purchase-security__intro h2 {
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 6vw, 4.35rem);
+  font-weight: 850;
+  line-height: 0.98;
+}
+
+.purchase-security__intro h2 span {
+  display: block;
+  color: var(--color-brand-light);
+}
+
+.purchase-security__intro p:not(.eyebrow) {
+  max-width: 38rem;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+.purchase-security__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1rem, 3vw, 1.4rem);
+  align-items: stretch;
+}
+
+.guarantee-panel {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  min-height: 17rem;
+  padding: clamp(1.05rem, 3vw, 1.45rem);
+  overflow: hidden;
+  border: 1px solid rgba(0, 216, 194, 0.24);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(0, 216, 194, 0.095), transparent 36%),
+    rgba(2, 6, 5, 0.68);
+  box-shadow: inset 0 0 32px rgba(0, 216, 194, 0.045);
+}
+
+.guarantee-panel::before {
+  position: absolute;
+  inset: auto -10% -32% auto;
+  width: 18rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 216, 194, 0.16);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 230, 184, 0.11), transparent 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.guarantee-panel--safe {
+  background:
+    linear-gradient(145deg, rgba(0, 205, 232, 0.09), transparent 38%),
+    rgba(2, 6, 5, 0.72);
+}
+
+.guarantee-panel__icon {
+  display: grid;
+  width: 3.2rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(0, 230, 184, 0.52);
+  border-radius: 0.85rem;
+  background: rgba(0, 230, 184, 0.075);
+  color: var(--color-brand-light);
+  box-shadow: inset 0 0 22px rgba(0, 216, 194, 0.08), 0 0 22px rgba(0, 230, 184, 0.08);
+}
+
+.guarantee-panel__icon svg {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.guarantee-panel__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.guarantee-panel--days .guarantee-panel__content {
+  grid-template-columns: auto 1fr;
+}
+
+.guarantee-panel__number {
+  color: var(--color-brand-light);
+  font-size: clamp(5.5rem, 12vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.78;
+  text-shadow: 0 0 38px rgba(0, 230, 184, 0.28);
+}
+
+.guarantee-panel__stamp {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(0, 216, 194, 0.42);
+  border-radius: 999px;
+  background: rgba(0, 230, 184, 0.055);
+  color: var(--color-brand-light);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guarantee-panel h3 {
+  margin-bottom: 0.55rem;
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+  font-weight: 820;
+  line-height: 1.05;
+}
+
+.guarantee-panel p {
+  max-width: 35rem;
+  color: var(--color-muted);
+  font-size: clamp(0.95rem, 1.8vw, 1.03rem);
+}
+
+.purchase-security__footer {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.purchase-security__footer .button {
+  width: min(100%, 26rem);
+}
+
+.purchase-security__footer p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--color-muted);
+  font-size: clamp(0.82rem, 2vw, 0.95rem);
+}
+
+.purchase-security__footer p svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  color: var(--color-brand-light);
+}
+
+@media (max-width: 760px) {
+  .purchase-security__card {
+    border-radius: var(--radius-lg);
+  }
+
+  .purchase-security__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantee-panel {
+    min-height: 0;
+  }
+
+  .guarantee-panel--days .guarantee-panel__content {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantee-panel__number {
+    font-size: clamp(4.4rem, 22vw, 6rem);
+  }
+
+  .purchase-security__footer p {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 .accordion--faq {
   max-width: 52rem;
 }
