@@ -17,8 +17,6 @@
 @media (min-width: 36rem) {
   .button { width: fit-content; }
   .button--wide { width: 100%; }
-  .pain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pain-card { grid-template-columns: 1fr; }
   .qualification-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .consent-banner { right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom)); left: auto; }
   .consent-banner__actions { justify-self: end; min-width: 18rem; }
@@ -26,7 +24,6 @@
 
 @media (min-width: 48rem) {
   .benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .demonstration .benefit-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .feature-card { min-height: 15rem; align-content: start; }
   .footer__grid { grid-template-columns: auto 1fr auto; align-items: center; }
   .site-footer nav { justify-content: center; }
@@ -65,19 +62,7 @@
   .hero .risk-notice { grid-column: 1; grid-row: 3; justify-self: start; }
   .micro-grid { grid-column: 2; grid-row: 3; }
 
-  .possibility__layout {
-    grid-template-columns: minmax(0, 0.88fr) minmax(30rem, 1.12fr);
-    gap: clamp(1rem, 2.5vw, 2rem);
-    align-items: start;
-  }
-
-  .possibility .benefit-grid { grid-template-columns: 1fr; }
   .possibility .feature-card { min-height: 0; }
-  .global-orb { width: clamp(22rem, 28vw, 31rem); margin-right: 0; }
-
-  .pain-card { grid-template-columns: auto 1fr; min-height: 10rem; }
-
-  .demonstration__grid { max-width: 68rem; }
 
   .button { padding-inline: 1.5rem; }
 }
@@ -110,26 +95,8 @@
 }
 
 @media (max-width: 47.99rem) {
-  .header-countdown {
-    position: absolute;
-    top: calc(100% + 0.45rem);
-    right: var(--gutter);
-    left: var(--gutter);
-    justify-content: center;
-    width: auto;
-    min-height: 2.1rem;
-    margin: 0;
-    padding: 0.35rem 0.55rem;
-    background: rgba(2, 6, 5, 0.9);
-    font-size: 0.68rem;
-  }
-
-  .header-countdown strong {
-    font-size: 0.82rem;
-  }
-
   .sticky-cta { display: grid; }
-  .hero { padding-top: calc(var(--header-height) + 4.75rem); }
+  .hero { padding-top: calc(var(--header-height) + 1.65rem); }
   .hero-video-stack,
   .video-card--hero { width: 100%; }
   .video-callout { width: min(100%, 15rem); }
@@ -142,16 +109,11 @@
   .possibility {
     min-height: auto;
     background:
-      linear-gradient(180deg, rgba(2, 6, 5, 0.92), rgba(2, 6, 5, 0.68) 42%, rgba(2, 6, 5, 0.96)),
-      linear-gradient(90deg, rgba(2, 6, 5, 0.94), rgba(2, 6, 5, 0.72)),
-      url("../images/visuals/traveler-working-background-mobile.webp") 56% center / cover no-repeat,
+      linear-gradient(180deg, rgba(2, 6, 5, 0.82), rgba(2, 6, 5, 0.46) 46%, rgba(2, 6, 5, 0.88)),
+      linear-gradient(90deg, rgba(2, 6, 5, 0.84), rgba(2, 6, 5, 0.38)),
+      url("../images/visuals/traveler-working-background-mobile.webp") 58% center / cover no-repeat,
       #020605;
   }
-  .possibility .global-orb { width: clamp(15rem, 70vw, 19rem); margin-top: 0.35rem; opacity: 0.45; }
-}
-
-@media (min-width: 48rem) and (max-width: 59.99rem) {
-  .global-orb { width: clamp(23rem, 58vw, 31rem); }
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {

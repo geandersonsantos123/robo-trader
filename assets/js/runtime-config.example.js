@@ -1,4 +1,4 @@
-// Copie os valores confirmados para runtime-config.js na Etapa 3.
+// Copie somente valores confirmados para runtime-config.js.
 // Este arquivo é público: nunca coloque segredos, tokens privados ou credenciais aqui.
 export const runtimeConfig = Object.freeze({
   metaPixelId: "",

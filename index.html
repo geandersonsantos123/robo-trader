@@ -86,16 +86,12 @@
         <a class="brand" href="#inicio" aria-label="Robô Trader — início">
           <img class="brand__logo" src="assets/images/brand/robo-trader-logo-horizontal.png" alt="Robô Trader" width="260" height="81">
         </a>
-        <div class="header-countdown" data-fixed-countdown aria-live="polite" aria-label="Tempo restante da oferta">
-          <span>A oferta expira em</span>
-          <strong data-countdown-clock>01:00:00</strong>
-        </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
           <span class="sr-only">Abrir menu</span><span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Navegação principal" data-site-nav>
           <a href="#metodo">Funcionamento</a>
-          <a href="#entrega">Entrega</a>
+          <a href="#certificado">Certificado</a>
           <a href="#oferta">Oferta</a>
           <a href="#faq">Dúvidas</a>
         </nav>
@@ -129,13 +125,13 @@
                   id="vsl-video"
                   controls
                   playsinline
-                  preload="metadata"
+                  preload="none"
                   poster="assets/images/posters/vsl-humanoid-poster.webp"
                   width="1920"
                   height="1080"
+                  data-video-src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4"
                   data-vsl-section-video
                 >
-                  <source src="https://res.cloudinary.com/x5w8hleo/video/upload/v1785458811/vsl_horizontal_com_efeitos_yoeixa.mp4" type="video/mp4">
                   Seu navegador não conseguiu reproduzir este vídeo.
                 </video>
                 <button class="video-play" type="button" aria-label="Reproduzir apresentação do Robô Trader" data-video-play data-cta data-cta-id="hero-video-play" data-section="hero" data-destination="vsl" data-action-type="video">
@@ -158,9 +154,6 @@
             <article class="micro-card" data-reveal><svg aria-hidden="true"><use href="#icon-sliders"/></svg><span>Configuração orientada</span></article>
           </div>
         </div>
-        <div class="roller" aria-label="Mercados compatíveis, tecnologia, conhecimento e automação configurável">
-          <div class="roller__track" aria-hidden="true"><span>Mercados compatíveis • Tecnologia • Conhecimento • Automação configurável •</span><span>Mercados compatíveis • Tecnologia • Conhecimento • Automação configurável •</span></div>
-        </div>
       </section>
 
       <section class="section possibility" id="possibilidade" aria-labelledby="possibility-title">
@@ -172,23 +165,14 @@
             <p data-reveal>Trabalhe e aprenda de qualquer lugar, com acesso a ferramentas e oportunidades do mercado internacional.</p>
           </div>
           <div class="possibility__layout">
-            <div class="possibility__content-stack">
-              <div class="benefit-grid" data-reveal-group>
-                <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-globe"/></svg></span><h3>Visão global</h3><p>Acompanhe possibilidades em mercados compatíveis além do contexto local.</p></article>
-                <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pulse"/></svg></span><h3>Contexto internacional</h3><p>Estude ativos e operações relacionados a moedas internacionais com responsabilidade.</p></article>
-                <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span><h3>Rotina flexível</h3><p>Organize estudo e acompanhamento de acordo com a sua rotina e seus limites.</p></article>
-              </div>
-            </div>
-            <div class="possibility__visual-stack">
-              <div class="global-orb" aria-label="Globo digital com conexões globais" role="img" data-global-orb data-reveal>
-                <canvas class="global-orb__canvas" width="720" height="720" aria-hidden="true"></canvas>
-                <div class="global-orb__fallback" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i></div>
-              </div>
+            <div class="benefit-grid" data-reveal-group>
+              <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-globe"/></svg></span><h3>Visão global</h3><p>Acompanhe possibilidades em mercados compatíveis além do contexto local.</p></article>
+              <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pulse"/></svg></span><h3>Contexto internacional</h3><p>Estude ativos e operações relacionados a moedas internacionais com responsabilidade.</p></article>
+              <article class="feature-card glass-card" data-reveal><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span><h3>Rotina flexível</h3><p>Organize estudo e acompanhamento de acordo com a sua rotina e seus limites.</p></article>
             </div>
           </div>
           <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="possibility-offer" data-section="possibilidade" data-destination="#oferta" data-action-type="scroll">Ver a condição especial <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller roller--reverse" aria-label="Flexibilidade, mercados globais, organização e autonomia"><div class="roller__track" aria-hidden="true"><span>Flexibilidade • Mercados globais • Organização • Autonomia •</span><span>Flexibilidade • Mercados globais • Organização • Autonomia •</span></div></div>
       </section>
 
       <section class="section global-markets" id="mercados-globais" aria-labelledby="global-markets-title">
@@ -199,21 +183,6 @@
               <p class="eyebrow" data-reveal>ATIVOS GLOBAIS E MERCADOS INTERNACIONAIS</p>
               <h2 id="global-markets-title" data-reveal>Operações em <span>mercados globais</span></h2>
               <p data-reveal>Acompanhe oportunidades ligadas ao dólar e a diferentes ativos internacionais de forma simples, organizada e com mais possibilidades de operação.</p>
-            </div>
-            <div class="market-panel" data-reveal aria-hidden="true">
-              <img class="market-panel__image" src="assets/images/markets/market-panel.webp" alt="" loading="lazy" decoding="async">
-              <div class="market-panel__globe"><span></span><i></i><i></i><i></i></div>
-              <div class="market-panel__callout glass-card">
-                <span><svg aria-hidden="true"><use href="#icon-globe"/></svg></span>
-                <strong>Mercados ligados<br>ao dólar</strong>
-              </div>
-              <div class="market-panel__candles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="market-panel__bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <svg class="market-panel__line" viewBox="0 0 760 260" aria-hidden="true">
-                <path d="M18 210 C82 204 105 156 158 168 C214 182 232 205 290 140 C348 76 394 118 448 94 C508 67 540 91 584 58 C636 19 688 36 742 16"/>
-                <path d="M18 210 C82 204 105 156 158 168 C214 182 232 205 290 140 C348 76 394 118 448 94 C508 67 540 91 584 58 C636 19 688 36 742 16"/>
-              </svg>
-              <div class="market-panel__scan"></div>
             </div>
           </div>
 
@@ -233,11 +202,11 @@
             </div>
             <div class="asset-carousel__viewport" data-carousel-viewport>
               <div class="asset-carousel__track" data-carousel-track>
-                <article class="asset-card asset-card--currency" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-usd-eur.webp" alt="" loading="lazy" decoding="async"></div><small>Mercado cambial</small><h3>USD/EUR</h3><p>Acompanhe um dos pares de moedas mais conhecidos do mercado.</p></article>
-                <article class="asset-card asset-card--bitcoin" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-bitcoin.webp" alt="" loading="lazy" decoding="async"></div><small>Criptoativo</small><h3>Bitcoin</h3><p>Exposição a um dos ativos digitais mais acompanhados do mundo.</p></article>
-                <article class="asset-card asset-card--gold" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-gold.webp" alt="" loading="lazy" decoding="async"></div><small>Metal global</small><h3>Ouro</h3><p>Um ativo tradicional observado em diversos cenários econômicos.</p></article>
-                <article class="asset-card asset-card--forex" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-forex.webp" alt="" loading="lazy" decoding="async"></div><small>Pares internacionais</small><h3>Forex</h3><p>Operações ligadas às oscilações entre moedas globais.</p></article>
-                <article class="asset-card asset-card--indices" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-indices.webp" alt="" loading="lazy" decoding="async"></div><small>Movimentos globais</small><h3>Índices</h3><p>Acompanhe tendências de mercados e economias internacionais.</p></article>
+                <article class="asset-card asset-card--currency" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-usd-eur.webp" alt="" width="640" height="420" loading="lazy" decoding="async" sizes="(min-width: 78rem) 24vw, (min-width: 48rem) 42vw, 82vw"></div><small>Mercado cambial</small><h3>USD/EUR</h3><p>Acompanhe um dos pares de moedas mais conhecidos do mercado.</p></article>
+                <article class="asset-card asset-card--bitcoin" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-bitcoin.webp" alt="" width="640" height="420" loading="lazy" decoding="async" sizes="(min-width: 78rem) 24vw, (min-width: 48rem) 42vw, 82vw"></div><small>Criptoativo</small><h3>Bitcoin</h3><p>Exposição a um dos ativos digitais mais acompanhados do mundo.</p></article>
+                <article class="asset-card asset-card--gold" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-gold.webp" alt="" width="640" height="420" loading="lazy" decoding="async" sizes="(min-width: 78rem) 24vw, (min-width: 48rem) 42vw, 82vw"></div><small>Metal global</small><h3>Ouro</h3><p>Um ativo tradicional observado em diversos cenários econômicos.</p></article>
+                <article class="asset-card asset-card--forex" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-forex.webp" alt="" width="640" height="420" loading="lazy" decoding="async" sizes="(min-width: 78rem) 24vw, (min-width: 48rem) 42vw, 82vw"></div><small>Pares internacionais</small><h3>Forex</h3><p>Operações ligadas às oscilações entre moedas globais.</p></article>
+                <article class="asset-card asset-card--indices" data-carousel-card><div class="asset-card__art"><img src="assets/images/markets/asset-indices.webp" alt="" width="640" height="420" loading="lazy" decoding="async" sizes="(min-width: 78rem) 24vw, (min-width: 48rem) 42vw, 82vw"></div><small>Movimentos globais</small><h3>Índices</h3><p>Acompanhe tendências de mercados e economias internacionais.</p></article>
               </div>
             </div>
             <div class="asset-carousel__progress" aria-hidden="true"><span data-carousel-progress></span></div>
@@ -246,25 +215,42 @@
 
           <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="markets-offer" data-section="mercados-globais" data-destination="#oferta" data-action-type="scroll">Conheça a estrutura <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller" aria-label="Dólar, forex, ouro, bitcoin, cripto e índices"><div class="roller__track" aria-hidden="true"><span>Dólar • Forex • Ouro • Bitcoin • Cripto • Índices •</span><span>Dólar • Forex • Ouro • Bitcoin • Cripto • Índices •</span></div></div>
       </section>
 
-      <section class="section pain" id="desafio" aria-labelledby="pain-title">
+      <section class="section manual-vs" id="comparativo" aria-labelledby="comparison-title">
         <div class="container">
-          <div class="section-heading" data-reveal-group>
-            <p class="eyebrow eyebrow--risk" data-reveal>O desafio da execução manual</p>
-            <h2 id="pain-title" data-reveal>A execução manual pode ficar sujeita a <span>impulso</span>, <span>mudanças de regra</span> e <span>tempo constante</span> diante da tela.</h2>
+          <div class="section-heading section-heading--center" data-reveal-group>
+            <p class="eyebrow" data-reveal>Comparativo de execução</p>
+            <h2 id="comparison-title" data-reveal>Operação manual <span>vs Robô Trader</span></h2>
+            <p data-reveal>Compare a execução manual com uma estratégia automatizada baseada em regras e parâmetros definidos.</p>
           </div>
-          <div class="pain-grid" data-reveal-group>
-            <article class="pain-card glass-card" data-reveal><span class="icon-tile icon-tile--risk"><svg aria-hidden="true"><use href="#icon-pulse"/></svg></span><div><h3>Operação emocional</h3><p>O plano pode mudar no meio do caminho quando a decisão fica sob pressão.</p></div></article>
-            <article class="pain-card glass-card" data-reveal><span class="icon-tile icon-tile--risk"><svg aria-hidden="true"><use href="#icon-clock"/></svg></span><div><h3>Tempo diante da tela</h3><p>O acompanhamento manual pode exigir atenção constante à execução.</p></div></article>
-            <article class="pain-card glass-card" data-reveal><span class="icon-tile icon-tile--risk"><svg aria-hidden="true"><use href="#icon-calendar"/></svg></span><div><h3>Falta de consistência</h3><p>Uma regra definida hoje pode ser abandonada em outra situação.</p></div></article>
-            <article class="pain-card glass-card" data-reveal><span class="icon-tile icon-tile--risk"><svg aria-hidden="true"><use href="#icon-bolt"/></svg></span><div><h3>Decisões por impulso</h3><p>Uma ação rápida pode ignorar parâmetros pensados com antecedência.</p></div></article>
+          <div class="comparison-grid" data-reveal-group>
+            <article class="comparison-card comparison-card--manual glass-card" data-reveal>
+              <p class="comparison-card__label">Trader operando sozinho</p>
+              <h3>Execução manual</h3>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#icon-close"/></svg>Mais interferência emocional</li>
+                <li><svg aria-hidden="true"><use href="#icon-close"/></svg>Entradas por impulso</li>
+                <li><svg aria-hidden="true"><use href="#icon-close"/></svg>Mudanças de estratégia sob pressão</li>
+                <li><svg aria-hidden="true"><use href="#icon-close"/></svg>Mais tempo diante da tela</li>
+                <li><svg aria-hidden="true"><use href="#icon-close"/></svg>Maior dificuldade para seguir regras de forma consistente</li>
+              </ul>
+            </article>
+            <div class="comparison-vs" aria-hidden="true">VS</div>
+            <article class="comparison-card comparison-card--robot glass-card" data-reveal>
+              <p class="comparison-card__label">Robô Trader</p>
+              <h3>Execução configurada</h3>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Executa regras configuradas</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Segue parâmetros definidos</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Mantém limites estabelecidos</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Reduz interferência impulsiva na execução</li>
+                <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Permite acompanhamento mais organizado</li>
+              </ul>
+            </article>
           </div>
-          <p class="bridge-statement" data-reveal><span aria-hidden="true">+</span> Existe uma forma mais organizada de executar parâmetros definidos por você.</p>
-          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="pain-offer" data-section="desafio" data-destination="#oferta" data-action-type="scroll">Aproveitar esta oportunidade <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="comparison-offer" data-section="comparativo" data-destination="#oferta" data-action-type="scroll">Conhecer o Robô Trader <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller" aria-label="Menos impulso, mais método, mais controle e mais consistência"><div class="roller__track roller__track--risk" aria-hidden="true"><span>Menos impulso • Mais método • Mais controle • Mais consistência •</span><span>Menos impulso • Mais método • Mais controle • Mais consistência •</span></div></div>
       </section>
 
       <section class="section method" id="metodo" aria-labelledby="method-title">
@@ -283,57 +269,6 @@
           </ol>
           <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="method-offer" data-section="metodo" data-destination="#oferta" data-action-type="scroll">Quero começar agora <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller roller--reverse" aria-label="Aprenda, teste, configure, automatize e acompanhe"><div class="roller__track" aria-hidden="true"><span>Aprenda • Teste • Configure • Automatize • Acompanhe •</span><span>Aprenda • Teste • Configure • Automatize • Acompanhe •</span></div></div>
-      </section>
-
-      <section class="section demonstration" id="demonstracao" aria-labelledby="demo-title">
-        <div class="container">
-          <div class="section-heading" data-reveal-group>
-            <p class="eyebrow" data-reveal>Apresentação guiada</p>
-            <h2 id="demo-title" data-reveal>Veja como parâmetros viram <span>uma execução acompanhável.</span></h2>
-            <p data-reveal>O fluxo abaixo é ilustrativo e explica o método. Ele não representa a interface final nem exibe dados financeiros.</p>
-          </div>
-          <div class="demonstration__grid">
-            <div class="benefit-list" data-reveal-group>
-              <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Execução configurável</h3><p>A automação executa parâmetros definidos por você.</p></div></article>
-              <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Regras e limites</h3><p>A estrutura ajuda a organizar como a execução deve acontecer.</p></div></article>
-              <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Menos interferência impulsiva</h3><p>Parâmetros prévios podem reduzir mudanças feitas sob pressão.</p></div></article>
-              <article data-reveal><span><svg aria-hidden="true"><use href="#icon-check"/></svg></span><div><h3>Acompanhamento flexível</h3><p>Você monitora o processo e continua responsável pelas decisões.</p></div></article>
-            </div>
-          </div>
-          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="demo-offer" data-section="demonstracao" data-destination="#oferta" data-action-type="scroll">Aproveitar esta oportunidade <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
-        </div>
-        <div class="roller" aria-label="Defina parâmetros, teste, execute e acompanhe"><div class="roller__track" aria-hidden="true"><span>Defina parâmetros • Teste • Execute • Acompanhe •</span><span>Defina parâmetros • Teste • Execute • Acompanhe •</span></div></div>
-      </section>
-
-      <section class="section delivery" id="entrega" aria-labelledby="delivery-title">
-        <div class="container">
-          <div class="section-heading" data-reveal-group>
-            <p class="eyebrow" data-reveal>Estrutura completa</p>
-            <h2 id="delivery-title" data-reveal>Mais que acesso ao robô: <span>uma estrutura para começar com clareza.</span></h2>
-            <p data-reveal>Tecnologia, formação, ambiente de testes, onboarding, materiais e suporte organizados em quatro frentes.</p>
-          </div>
-          <div class="accordion" data-accordion data-accordion-mode="single">
-            <article class="accordion__item glass-card" data-reveal>
-              <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="delivery-tech"><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-chip"/></svg></span><span><small>01</small><strong>Tecnologia</strong></span><i aria-hidden="true"></i></button>
-              <div class="accordion__panel" id="delivery-tech" role="region"><ul><li>Ferramenta de automação configurável</li><li>Execução de parâmetros definidos por você</li><li>Atualizações correspondentes ao plano</li></ul></div>
-            </article>
-            <article class="accordion__item glass-card" data-reveal>
-              <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="delivery-learning"><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-cap"/></svg></span><span><small>02</small><strong>Formação</strong></span><i aria-hidden="true"></i></button>
-              <div class="accordion__panel" id="delivery-learning" role="region"><ul><li>Formação introdutória</li><li>Conteúdo para aprender a utilizar</li><li>Método de aprendizado e testes</li></ul></div>
-            </article>
-            <article class="accordion__item glass-card" data-reveal>
-              <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="delivery-onboarding"><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-rocket"/></svg></span><span><small>03</small><strong>Implementação</strong></span><i aria-hidden="true"></i></button>
-              <div class="accordion__panel" id="delivery-onboarding" role="region"><ul><li>Conta demonstrativa</li><li>Configuração e testes</li><li>Onboarding técnico</li></ul></div>
-            </article>
-            <article class="accordion__item glass-card" data-reveal>
-              <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="delivery-continuity"><span class="icon-tile"><svg aria-hidden="true"><use href="#icon-headset"/></svg></span><span><small>04</small><strong>Continuidade</strong></span><i aria-hidden="true"></i></button>
-              <div class="accordion__panel" id="delivery-continuity" role="region"><ul><li>Materiais de apoio</li><li>Suporte</li><li>Atualizações correspondentes ao plano</li></ul></div>
-            </article>
-          </div>
-          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="delivery-offer" data-section="entrega" data-destination="#oferta" data-action-type="scroll">Ir para o pagamento <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
-        </div>
-        <div class="roller roller--reverse" aria-label="Tecnologia, formação, conta demonstrativa, onboarding e suporte"><div class="roller__track" aria-hidden="true"><span>Tecnologia • Formação • Conta demonstrativa • Onboarding • Suporte •</span><span>Tecnologia • Formação • Conta demonstrativa • Onboarding • Suporte •</span></div></div>
       </section>
 
       <section class="section certificate" id="certificado" aria-labelledby="certificate-title">
@@ -354,28 +289,20 @@
           <div class="certificate__media" data-reveal>
             <button class="certificate-preview glass-card" type="button" data-certificate-open aria-haspopup="dialog" aria-controls="certificate-dialog" aria-label="Ampliar prévia do certificado de conclusão">
               <span class="certificate-preview__badge"><svg aria-hidden="true"><use href="#icon-cap"/></svg>Certificado digital</span>
-              <img src="https://res.cloudinary.com/x5w8hleo/image/upload/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Miniatura do certificado de conclusão do Robô Trader" width="1280" height="720" loading="lazy" decoding="async">
+              <img src="https://res.cloudinary.com/x5w8hleo/image/upload/f_auto,q_auto,w_960/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Miniatura do certificado de conclusão do Robô Trader" width="1280" height="960" loading="lazy" decoding="async" sizes="(min-width: 60rem) 40vw, 92vw">
               <span class="certificate-preview__hint">Clique para ampliar</span>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="section qualification" id="compatibilidade" aria-labelledby="qualification-title">
+      <section class="section qualification" id="compatibilidade" aria-label="Perfil indicado para o Robô Trader">
         <div class="container">
-          <div class="section-heading" data-reveal-group>
-            <p class="eyebrow" data-reveal>Decisão com clareza</p>
-            <h2 id="qualification-title" data-reveal>Uma estrutura para quem quer <span>aprender antes de automatizar.</span></h2>
-            <p data-reveal>A proposta exige participação, configuração e acompanhamento. Não é uma promessa de resultado.</p>
-          </div>
           <div class="qualification-grid" data-reveal-group>
             <article class="qualification-card glass-card" data-reveal><span class="qualification-card__label">Para quem é</span><ul><li>Quer aprender o processo desde o básico</li><li>Está disposto a testar em conta demonstrativa</li><li>Entende que precisa configurar e acompanhar</li><li>Busca mais organização, não promessas</li></ul></article>
             <article class="qualification-card qualification-card--negative glass-card" data-reveal><span class="qualification-card__label">Para quem não é</span><ul><li>Busca promessa de retorno financeiro</li><li>Quer automatizar sem assumir responsabilidade</li><li>Espera que o risco financeiro deixe de existir</li><li>Não pretende aprender, testar ou acompanhar</li></ul></article>
           </div>
-          <!-- Compatibilidades técnicas só serão inseridas após confirmação na Etapa 3. -->
-          <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="fit-offer" data-section="compatibilidade" data-destination="#oferta" data-action-type="scroll">Quero finalizar meu pedido <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller roller--reverse" aria-label="Confira requisitos, entenda os limites e decida com clareza"><div class="roller__track" aria-hidden="true"><span>Entenda os limites • Aprenda o processo • Decida com clareza •</span><span>Entenda os limites • Aprenda o processo • Decida com clareza •</span></div></div>
       </section>
 
       <section class="section offer" id="oferta" aria-labelledby="offer-title" data-offer>
@@ -419,7 +346,6 @@
             </div>
           </article>
         </div>
-        <div class="roller" aria-label="Aprenda, teste, configure e acompanhe"><div class="roller__track" aria-hidden="true"><span>Aprenda • Teste • Configure • Acompanhe •</span><span>Aprenda • Teste • Configure • Acompanhe •</span></div></div>
       </section>
 
       <section class="section purchase-security" id="seguranca" aria-labelledby="purchase-security-title">
@@ -477,15 +403,13 @@
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-demo"><span>Posso testar antes do uso real?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-demo" role="region"><p>A oferta inclui uma conta demonstrativa para aprender e testar a configuração antes de considerar outros ambientes.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-price"><span>Qual é o investimento?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-price" role="region"><p>Durante a oferta especial, o acesso à estrutura aparece no checkout por R$ 147,90 à vista. O checkout também permite parcelamento em até 12x no cartão, com acréscimo no valor parcelado.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-safe"><span>A compra é segura?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-safe" role="region"><p>Sim. O pagamento é processado pela Hotmart, uma plataforma reconhecida de produtos digitais. Os dados de pagamento são tratados em um ambiente seguro.</p></div></article>
-            <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-guarantee"><span>O Robô Trader possui garantia?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-guarantee" role="region"><p>Sim. O produto possui 7 dias de garantia. Durante esse prazo, você poderá acessar o conteúdo, conhecer o sistema e solicitar o reembolso conforme as regras da Hotmart.</p></div></article>
-            <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-refund"><span>Como posso solicitar o reembolso?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-refund" role="region"><p>A solicitação deve ser feita dentro do prazo de 7 dias pelos canais e procedimentos disponibilizados pela Hotmart. Após esse prazo, aplicam-se as condições da plataforma.</p></div></article>
+            <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-guarantee"><span>O Robô Trader possui garantia?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-guarantee" role="region"><p>Sim. O produto possui 7 dias de garantia. Durante esse prazo, você poderá acessar o conteúdo, conhecer o sistema e solicitar o reembolso pelos canais e procedimentos disponibilizados pela Hotmart.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-access"><span>Quando recebo o acesso?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-access" role="region"><p>Após a confirmação do pagamento pela Hotmart, as informações de acesso ao produto serão enviadas para o e-mail utilizado na compra.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-support"><span>Como funciona o suporte?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-support" role="region"><p>Canal, prazo e duração serão detalhados após a confirmação da compra.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-results"><span>A automação garante resultados?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-results" role="region"><p>Não. Operações financeiras envolvem riscos, e a automação não garante lucro, renda ou qualquer resultado.</p></div></article>
           </div>
           <a class="button button--primary section-cta" href="#oferta" data-reveal data-cta data-cta-id="faq-offer" data-section="faq" data-destination="#oferta" data-action-type="scroll">Quero finalizar meu pedido <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
         </div>
-        <div class="roller" aria-label="Funcionamento, testes, suporte, risco e decisão"><div class="roller__track" aria-hidden="true"><span>Funcionamento • Testes • Suporte • Risco • Decisão •</span><span>Funcionamento • Testes • Suporte • Risco • Decisão •</span></div></div>
       </section>
 
     </main>
@@ -493,7 +417,7 @@
     <footer class="site-footer" data-site-footer>
       <div class="container footer__grid">
         <a class="brand" href="#inicio" aria-label="Robô Trader — voltar ao início"><img class="brand__logo" src="assets/images/brand/robo-trader-logo-horizontal.png" alt="Robô Trader" width="260" height="81"></a>
-        <nav aria-label="Navegação do rodapé"><a href="#metodo">Funcionamento</a><a href="#entrega">Entrega</a><a href="#oferta">Oferta</a><a href="#faq">Dúvidas</a></nav>
+        <nav aria-label="Navegação do rodapé"><a href="#metodo">Funcionamento</a><a href="#certificado">Certificado</a><a href="#oferta">Oferta</a><a href="#faq">Dúvidas</a></nav>
         <div class="footer__meta"><p>Landing page funcional com checkout oficial conectado.</p><button type="button" class="text-button" data-consent-settings>Preferências de marketing</button></div>
       </div>
     </footer>
@@ -503,28 +427,20 @@
       <button type="button" class="button button--primary" data-sticky-button aria-label="Comprar agora, ir para a oferta">Comprar agora</button>
     </div>
 
-    <dialog class="integration-dialog" id="integration-dialog" aria-labelledby="integration-title">
-      <button class="dialog-close" type="button" data-dialog-close aria-label="Fechar diálogo"><svg aria-hidden="true"><use href="#icon-close"/></svg></button>
-      <p class="eyebrow">Protótipo seguro</p>
-      <h2 id="integration-title">Integração preparada</h2>
-      <p data-dialog-message>O canal oficial será conectado na versão de publicação. Nenhuma ação comercial real foi iniciada.</p>
-      <button class="button button--secondary" type="button" data-dialog-return>Voltar à página</button>
-    </dialog>
-
     <dialog class="certificate-dialog" id="certificate-dialog" aria-labelledby="certificate-dialog-title" data-certificate-dialog>
       <button class="dialog-close" type="button" data-certificate-close aria-label="Fechar prévia do certificado"><svg aria-hidden="true"><use href="#icon-close"/></svg></button>
       <div class="certificate-dialog__content">
         <p class="eyebrow">Certificação</p>
         <h2 id="certificate-dialog-title">Certificado de conclusão</h2>
-        <img src="https://res.cloudinary.com/x5w8hleo/image/upload/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Certificado de conclusão do Robô Trader ampliado" width="1280" height="720" loading="lazy" decoding="async">
+        <img src="https://res.cloudinary.com/x5w8hleo/image/upload/f_auto,q_auto,w_1440/v1785983025/ChatGPT_Image_5_de_ago._de_2026_23_22_51_v7tl1k.png" alt="Certificado de conclusão do Robô Trader ampliado" width="1280" height="960" loading="lazy" decoding="async">
       </div>
     </dialog>
 
     <aside class="consent-banner glass-card" data-consent-banner hidden aria-labelledby="consent-title">
-      <div><h2 id="consent-title">Preferências de marketing</h2><p>O protótipo não carrega o Meta Pixel. Você pode aceitar ou rejeitar a preparação de medição; a página funciona da mesma forma.</p></div>
+      <div><h2 id="consent-title">Preferências de marketing</h2><p>Você pode aceitar ou rejeitar a preparação de medição. A página funciona normalmente em qualquer escolha.</p></div>
       <div class="consent-banner__actions"><button type="button" class="button button--secondary button--small" data-consent="rejected">Rejeitar</button><button type="button" class="button button--secondary button--small" data-consent="accepted">Aceitar</button></div>
     </aside>
 
-    <noscript><p class="noscript-notice">A página permanece legível sem JavaScript. Menu móvel, acordeões, animações e integrações preparadas exigem JavaScript para aprimoramento.</p></noscript>
+    <noscript><p class="noscript-notice">A página permanece legível sem JavaScript. Menu móvel, acordeões, animações e preferências de marketing usam JavaScript para aprimoramento.</p></noscript>
   </body>
 </html>

@@ -2,13 +2,14 @@ import { runtimeConfig } from "./runtime-config.js";
 import { track } from "./tracking.js";
 import { select, selectAll, toSafeUrl } from "./utils.js";
 
-export function initVideo({ showDialog }) {
+export function initVideo() {
   const video = select("#vsl-video");
   const playButtons = selectAll("[data-video-play]");
   const status = select("[data-video-status]");
   if (!video) return;
 
   if (runtimeConfig.videoPoster) video.poster = runtimeConfig.videoPoster;
+  video.preload = "none";
 
   let progressBound = false;
   const bindProgress = () => {
@@ -38,24 +39,21 @@ export function initVideo({ showDialog }) {
     });
   };
 
-  const inlineSource = video.querySelector("source")?.src || video.currentSrc || video.src;
-  if (inlineSource) bindProgress();
+  const lazySource = video.dataset.videoSrc || runtimeConfig.videoUrl;
 
   if (!playButtons.length) return;
 
   const handlePlayClick = async () => {
-    const source = toSafeUrl(runtimeConfig.videoUrl) || toSafeUrl(inlineSource);
+    const source = toSafeUrl(lazySource);
     if (!source) {
-      showDialog({
-        title: "VSL preparada",
-        message: "A estrutura do player está pronta, mas o vídeo oficial ainda não foi fornecido. Nenhum conteúdo externo foi carregado."
-      });
+      if (status) status.textContent = "Não foi possível localizar o vídeo oficial.";
       return;
     }
 
     if (!video.currentSrc && !video.src) {
       video.src = source.href;
       video.controls = true;
+      bindProgress();
     }
 
     playButtons.forEach((button) => {

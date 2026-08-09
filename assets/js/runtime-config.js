@@ -1,4 +1,4 @@
-// Configuração segura do protótipo. Integrações desconhecidas permanecem vazias.
+// Configuração segura da landing page. Integrações desconhecidas permanecem vazias.
 // Este arquivo roda no navegador e não pode conter segredos.
 const localHostnames = new Set(["localhost", "127.0.0.1", "[::1]"]);
 
