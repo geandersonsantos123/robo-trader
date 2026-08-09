@@ -885,6 +885,82 @@
   .asset-carousel__header {
     align-items: end;
   }
+
+  .asset-carousel__controls {
+    gap: 0.45rem;
+  }
+
+  .asset-carousel__controls button {
+    width: 2.35rem;
+  }
+
+  .asset-carousel__controls svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .asset-carousel__viewport {
+    padding-bottom: 0.72rem;
+    scrollbar-width: none;
+  }
+
+  .asset-carousel__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .asset-carousel__track {
+    grid-auto-columns: min(76vw, 19rem);
+    gap: clamp(0.75rem, 3.5vw, 1rem);
+  }
+
+  .asset-card {
+    min-height: 20.2rem;
+    gap: 0.4rem;
+    padding: 0.72rem 0.78rem 0.9rem;
+    border-radius: 0.86rem;
+  }
+
+  .asset-card__art {
+    min-height: 9.8rem;
+    margin: -0.1rem -0.12rem 0.45rem;
+    border-radius: 0.72rem;
+  }
+
+  .asset-card__art::after {
+    height: 2.5rem;
+    opacity: 0.16;
+  }
+
+  .asset-card small {
+    font-size: 0.74rem;
+  }
+
+  .asset-card h3 {
+    font-size: clamp(1.28rem, 5.5vw, 1.52rem);
+  }
+
+  .asset-card p {
+    font-size: 0.88rem;
+    line-height: 1.38;
+  }
+
+  .asset-carousel__progress {
+    height: 0.2rem;
+    opacity: 0.75;
+  }
+
+  .asset-carousel__dots {
+    gap: 0.34rem;
+  }
+
+  .asset-carousel__dots button {
+    width: 1.1rem;
+    height: 0.22rem;
+  }
+
+  .asset-carousel__dots button.is-active {
+    width: 1.6rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
