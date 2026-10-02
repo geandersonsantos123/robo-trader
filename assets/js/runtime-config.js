@@ -12,6 +12,8 @@ export const runtimeConfig = Object.freeze({
   productName: "ROBÔ TRADER",
   productId: "robo-trader",
   price: 247,
+  installmentCount: 12,
+  installmentPrice: 25.55,
   regularPrice: null,
   currency: "BRL",
   companyName: "",

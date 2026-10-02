@@ -38,7 +38,10 @@ function initCommercialActions() {
 
 function renderConfiguredPrice() {
   const price = formatPrice(runtimeConfig.price, runtimeConfig.currency);
+  const installmentPrice = formatPrice(runtimeConfig.installmentPrice, runtimeConfig.currency);
   selectAll("[data-price]").forEach((element) => setText(element, price));
+  selectAll("[data-installment-count]").forEach((element) => setText(element, String(runtimeConfig.installmentCount)));
+  selectAll("[data-installment-price]").forEach((element) => setText(element, installmentPrice));
   selectAll("[data-price-template]").forEach((element) => {
     setText(element, element.dataset.priceTemplate.replace("{price}", price));
   });

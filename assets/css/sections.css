@@ -1706,7 +1706,7 @@
   position: relative;
   display: grid;
   justify-items: center;
-  gap: 0.35rem;
+  gap: 0.28rem;
   padding: clamp(1rem, 2.6vw, 1.35rem);
   overflow: hidden;
   border: 1px solid rgba(0, 216, 194, 0.58);
@@ -1722,70 +1722,56 @@
   width: 1rem;
   height: 1rem;
   color: var(--color-brand-light);
+  margin-bottom: 0.05rem;
 }
 
-.price-lockup span {
-  color: var(--color-muted);
-  font-size: clamp(0.82rem, 1.6vw, 0.9rem);
-  font-weight: 720;
-}
-
-.price-lockup s {
-  color: #cbd5d2;
-  text-decoration-color: rgba(0, 230, 184, 0.82);
-  text-decoration-thickness: 0.12em;
-}
-
-.price-lockup small {
-  color: var(--color-text);
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 860;
-  letter-spacing: 0.04em;
+.price-lockup__eyebrow {
+  color: rgba(221, 235, 231, 0.68);
+  font-size: clamp(0.68rem, 1.2vw, 0.76rem);
+  font-weight: 780;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-.price-lockup strong {
+.price-lockup__installment-label {
+  margin-top: 0.1rem;
+  color: var(--color-text);
+  font-size: clamp(0.95rem, 1.7vw, 1.08rem);
+  font-weight: 780;
+  line-height: 1.05;
+}
+
+.price-lockup__installment-value {
   color: var(--color-brand-light);
-  font-size: clamp(2.8rem, 5.2vw, 3.95rem);
-  line-height: 0.94;
+  font-size: clamp(3.15rem, 7.2vw, 5rem);
+  line-height: 0.92;
   letter-spacing: 0;
   white-space: nowrap;
   text-shadow: 0 0 34px rgba(0, 230, 176, 0.3);
 }
 
-.price-lockup em {
+.price-lockup__cash {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   color: var(--color-text);
-  font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+  font-size: clamp(0.82rem, 1.55vw, 0.96rem);
   font-style: normal;
   font-weight: 720;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
-.price-lockup em::before,
-.price-lockup em::after {
+.price-lockup__cash::before,
+.price-lockup__cash::after {
   width: clamp(1.5rem, 4vw, 2.8rem);
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-brand-light));
   content: "";
 }
 
-.price-lockup em::after {
+.price-lockup__cash::after {
   background: linear-gradient(90deg, var(--color-brand-light), transparent);
-}
-
-.price-lockup b {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.35rem;
-  padding: 0.35rem 0.65rem;
-  border: 1px solid rgba(0, 230, 184, 0.58);
-  border-radius: 999px;
-  color: var(--color-brand-light);
-  font-size: clamp(0.82rem, 1.7vw, 0.98rem);
-  font-weight: 760;
 }
 
 .price-lockup__notice {
@@ -1912,12 +1898,16 @@
     padding: 0.9rem 1.05rem;
   }
 
-  .price-lockup small {
-    font-size: 1.12rem;
+  .price-lockup__eyebrow {
+    font-size: 0.72rem;
   }
 
-  .price-lockup strong {
-    font-size: clamp(3rem, 4.5vw, 3.45rem);
+  .price-lockup__installment-label {
+    font-size: 1.02rem;
+  }
+
+  .price-lockup__installment-value {
+    font-size: clamp(3.3rem, 5.2vw, 4.25rem);
   }
 
   .promo-countdown {
@@ -1980,12 +1970,27 @@
     width: 2.2rem;
   }
 
-  .price-lockup strong {
-    font-size: clamp(3.1rem, 15vw, 4rem);
+  .price-lockup {
+    gap: 0.22rem;
+    padding-inline: clamp(0.85rem, 4vw, 1.1rem);
   }
 
-  .price-lockup em {
-    gap: 0.5rem;
+  .price-lockup__installment-label {
+    font-size: clamp(0.88rem, 4vw, 1rem);
+  }
+
+  .price-lockup__installment-value {
+    font-size: clamp(2.9rem, 14vw, 3.75rem);
+  }
+
+  .price-lockup__cash {
+    gap: 0.42rem;
+    font-size: clamp(0.78rem, 3.7vw, 0.92rem);
+  }
+
+  .price-lockup__cash::before,
+  .price-lockup__cash::after {
+    width: clamp(0.9rem, 5vw, 1.5rem);
   }
 
 }
