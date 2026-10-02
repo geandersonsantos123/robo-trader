@@ -1,8 +1,8 @@
-# Oferta oficial — R$197
+# Oferta oficial — R$ 247,00
 
 ## Fonte de verdade
 
-O preço total oficial informado é **R$197**.
+O preço total oficial informado é **R$ 247,00**.
 
 Não estão confirmados: parcelamento, valor de parcela, desconto, preço anterior, forma de pagamento, checkout, garantia, reembolso, prazo, urgência, escassez ou acesso imediato. Nada disso pode aparecer como fato.
 
@@ -22,7 +22,7 @@ Esses pilares estão confirmados como direção da oferta, mas nomes, quantidade
 
 - Mostrar primeiro o conjunto da entrega e a lógica “aprenda → teste → configure → acompanhe”.
 - Usar uma lista curta de itens confirmados; detalhes longos podem ficar em acordeão.
-- Apresentar “Investimento total: R$197”, sem preço riscado nem equivalência diária não comprovada.
+- Apresentar “Investimento total: R$ 247,00”, sem preço riscado nem equivalência diária não comprovada.
 - Exibir aviso de risco próximo ao CTA.
 - Usar CTA de checkout somente após o destino ser confirmado. Até lá, protótipo pode rolar para FAQ ou usar ação claramente não transacional.
 - Não calcular valor percebido de itens sem base comercial.

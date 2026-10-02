@@ -10,7 +10,7 @@ import { initPreloader } from "./preloader.js";
 import { initPromoCountdown } from "./promo-countdown.js";
 import { appendAttribution, getMarketingConsent, initTracking, setMarketingConsent, track } from "./tracking.js";
 import { initVideo } from "./video.js";
-import { select, selectAll, toSafeUrl } from "./utils.js";
+import { formatPrice, select, selectAll, toSafeUrl, setText } from "./utils.js";
 
 function handleCommercialAction(sourceSection) {
   const checkout = toSafeUrl(runtimeConfig.checkoutUrl, { allowRelative: false });
@@ -33,6 +33,14 @@ function handleCommercialAction(sourceSection) {
 function initCommercialActions() {
   selectAll("[data-commercial-action]").forEach((button) => {
     button.addEventListener("click", () => handleCommercialAction(button.dataset.section || "unknown"));
+  });
+}
+
+function renderConfiguredPrice() {
+  const price = formatPrice(runtimeConfig.price, runtimeConfig.currency);
+  selectAll("[data-price]").forEach((element) => setText(element, price));
+  selectAll("[data-price-template]").forEach((element) => {
+    setText(element, element.dataset.priceTemplate.replace("{price}", price));
   });
 }
 
@@ -62,6 +70,7 @@ function initConsent() {
 
 function init() {
   document.documentElement.classList.remove("no-js");
+  renderConfiguredPrice();
   initPreloader();
   initTracking();
   initConsent();

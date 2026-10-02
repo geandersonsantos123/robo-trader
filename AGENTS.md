@@ -4,9 +4,9 @@ Este repositório prepara e implementará uma landing page mobile-first do **ROB
 
 ## Fontes de verdade
 
-- Preço total oficial: **R$197**. Parcelamento, checkout, garantia e demais condições estão pendentes.
+- Preço total oficial: **R$ 247,00**. Parcelamento, checkout, garantia e demais condições estão pendentes.
 - Leia primeiro [docs/INDEX.md](docs/INDEX.md), [docs/project/PRODUCT_BRIEF.md](docs/project/PRODUCT_BRIEF.md), [docs/project/DECISIONS.md](docs/project/DECISIONS.md) e [docs/project/OPEN_QUESTIONS.md](docs/project/OPEN_QUESTIONS.md).
-- A composição autorizada da oferta está em [docs/offer/OFFER_R197.md](docs/offer/OFFER_R197.md).
+- A composição autorizada da oferta está em [docs/offer/OFFER_R247.md](docs/offer/OFFER_R247.md).
 - Regras de alegações estão em [docs/copy/CLAIMS_AND_GUARDRAILS.md](docs/copy/CLAIMS_AND_GUARDRAILS.md).
 - As imagens em `references/visual/mobile-sections/` são referências conceituais; textos, números, preços e resultados nelas não são fontes comerciais.
 

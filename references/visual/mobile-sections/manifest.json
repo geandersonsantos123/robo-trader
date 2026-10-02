@@ -1,7 +1,7 @@
 {
   "version": 1,
   "generatedAt": "2026-07-20",
-  "interpretation": "Conceptual visual references only. Commercial copy, proof, metrics, compatibility and conditions in the images are non-authoritative. The sole official price is R$197.",
+  "interpretation": "Conceptual visual references only. Commercial copy, proof, metrics, compatibility and conditions in the images are non-authoritative. The sole official price is R$ 247,00.",
   "references": [
     {
       "id": "hero-vsl",
@@ -109,13 +109,13 @@
       "risks": ["wall of text", "unconfirmed deliverables", "all accordions open", "repetitive cards"]
     },
     {
-      "id": "oferta-r197",
+      "id": "oferta-r247",
       "sourceFile": "referencias-visuais/oferta.png",
-      "file": "06-oferta-r197.png",
+      "file": "06-oferta-r247.png",
       "width": 941,
       "height": 1672,
       "sha256": "E638AD446BF8A53B04160FF41E215EA00600228D5568D8DBBB23EDF543F267C3",
-      "section": "Official R$197 offer",
+      "section": "Official R$ 247,00 offer",
       "purpose": "Consolidate confirmed delivery, total investment, risk and the real next action.",
       "psychologicalStage": "Offer and decision",
       "visualPatterns": ["central offer card", "deliverables checklist", "dominant price lockup", "primary and secondary CTA", "risk notice", "roller"],
@@ -124,8 +124,8 @@
       "desiredCTA": "Acessar o Robô Trader",
       "desiredRoller": "aprenda • teste • configure • acompanhe",
       "animationIdeas": ["single card reveal", "static glow", "no countdown or price animation"],
-      "implementationNotes": ["Display only total R$197", "Use confirmed checkout/contact only", "Simplify the card", "Track checkout only on a real checkout action"],
-      "authoritativeFields": ["conceptual offer role", "centralized price hierarchy", "risk-near-CTA pattern", "official project price R$197 from the brief, not from image content"],
+      "implementationNotes": ["Display only total R$ 247,00", "Use confirmed checkout/contact only", "Simplify the card", "Track checkout only on a real checkout action"],
+      "authoritativeFields": ["conceptual offer role", "centralized price hierarchy", "risk-near-CTA pattern", "official project price R$ 247,00 from the brief, not from image content"],
       "nonAuthoritativeFields": ["all prices shown inside the image", "installments", "strikethrough price", "immediate access", "deliverable names", "WhatsApp", "conditions", "claims"],
       "risks": ["unauthorized commercial data", "excessive promotional glow", "fake price anchoring", "unconfirmed destination", "small risk text"]
     }

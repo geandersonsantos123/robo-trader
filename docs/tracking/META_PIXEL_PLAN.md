@@ -11,7 +11,7 @@
 
 ### Implementação atual
 
-- `assets/js/runtime-config.js` mantém `metaPixelId`, checkout, WhatsApp e VSL vazios; `price: 197` e `currency: BRL` são os únicos dados comerciais preenchidos.
+- `assets/js/runtime-config.js` mantém `metaPixelId`, checkout, WhatsApp e VSL vazios; `price: 247` e `currency: BRL` são os únicos dados comerciais preenchidos.
 - `assets/js/tracking.js` centraliza consentimento, deduplicação em memória, UTMs permitidas, eventos locais e carregamento condicional do Pixel.
 - `CTAInteraction` é o evento local para todos os CTAs, com `cta_id`, seção, destino e tipo de ação.
 - `ViewOffer` ocorre uma vez após visibilidade mínima do card; eventos de vídeo só são ligados quando existe mídia real e a reprodução começa.
@@ -29,10 +29,10 @@
 | `VideoProgress50` | Primeiro cruzamento de 50% | `progress: 50` | Idem. |
 | `VideoProgress75` | Primeiro cruzamento de 75% | `progress: 75` | Idem. |
 | `VideoComplete` | Player confirma término | `progress: 100` | Não inferir por tempo aproximado. |
-| `ViewOffer` | ≥50% do card de oferta visível por ~1 s | `content_name`, `value: 197`, `currency: BRL` | Uma vez. |
-| `InitiateCheckout` | Clique válido que abre checkout real | `value: 197`, `currency: BRL`, `source_section`, `cta_id` | Não disparar em CTA de rolagem. |
+| `ViewOffer` | ≥50% do card de oferta visível por ~1 s | `content_name`, `value: 247`, `currency: BRL` | Uma vez. |
+| `InitiateCheckout` | Clique válido que abre checkout real | `value: 247`, `currency: BRL`, `source_section`, `cta_id` | Não disparar em CTA de rolagem. |
 | `Contact` | Clique em canal oficial de contato | `source_section`, `cta_id`, `contact_type` | Sem telefone, texto livre ou PII. |
-| `Purchase` | Confirmação real e confiável do pagamento | `value: 197`, `currency: BRL`, `order_id/event_id` | Nunca na landing ou mero retorno de URL. |
+| `Purchase` | Confirmação real e confiável do pagamento | `value: 247`, `currency: BRL`, `order_id/event_id` | Nunca na landing ou mero retorno de URL. |
 
 Eventos de navegação interna usam o evento local `CTAInteraction`; não precisam ser enviados como eventos-padrão Meta se não houver objetivo claro.
 

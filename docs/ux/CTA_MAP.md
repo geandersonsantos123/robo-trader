@@ -5,7 +5,7 @@
 - Um CTA principal por seção. CTAs de rolagem não disparam eventos Meta de checkout.
 - Todo clique registra internamente `cta_click` com `cta_id`, `cta_label`, `source_section`, `destination_type` e UTMs permitidas. Não enviar texto livre ou dados pessoais.
 - `InitiateCheckout` só é válido quando o destino real de checkout estiver configurado; `Contact` só é válido para canal oficial de contato.
-- A sticky CTA nasce após `#metodo`; antes de `#oferta` não exibe preço, depois pode exibir “R$197”.
+- A sticky CTA nasce após `#metodo`; antes de `#oferta` não exibe preço, depois pode exibir “R$ 247,00”.
 
 | ID | Seção/origem | Rótulo recomendado | Destino | Evento de negócio |
 | --- | --- | --- | --- | --- |
@@ -17,13 +17,13 @@
 | `demo-delivery` | Demonstração | Conhecer a estrutura completa | `#entrega` | `cta_click` interno |
 | `delivery-fit` | Entrega | Ver para quem é | `#compatibilidade` | `cta_click` interno |
 | `proof-fit` | Provas | Ver se é compatível comigo | `#compatibilidade` | `cta_click` interno |
-| `fit-offer` | Compatibilidade | Ver a oferta de R$197 | `#oferta` | `cta_click` interno |
+| `fit-offer` | Compatibilidade | Ver a oferta de R$ 247,00 | `#oferta` | `cta_click` interno |
 | `offer-primary` | Oferta | Acessar o Robô Trader | `[CHECKOUT_URL]` pendente | `InitiateCheckout`, uma vez por ação |
 | `offer-contact` | Oferta | Tirar dúvidas | `[CONTACT_URL]` pendente | `Contact` |
 | `risk-faq` | Segurança | Revisar dúvidas frequentes | `#faq` | `cta_click` interno |
 | `faq-offer` | FAQ | Voltar à oferta | `#oferta` | `cta_click` interno |
 | `final-primary` | Fechamento | Começar com a estrutura | Mesmo checkout confirmado | `InitiateCheckout`, origem `final` |
-| `sticky-primary` | Sticky dinâmica | Entender como funciona / Acessar por R$197 | Interno antes da oferta; checkout depois | Interno ou `InitiateCheckout` conforme destino |
+| `sticky-primary` | Sticky dinâmica | Entender como funciona / Acessar por R$ 247,00 | Interno antes da oferta; checkout depois | Interno ou `InitiateCheckout` conforme destino |
 
 ## Comportamento pendente
 

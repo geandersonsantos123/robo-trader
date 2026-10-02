@@ -2,7 +2,7 @@
 
 | Data | Status | Decisão | Motivo | Impacto |
 | --- | --- | --- | --- | --- |
-| 2026-07-20 | Confirmada | O preço total oficial é R$197. | Único valor fornecido como fonte de verdade. | Todo outro preço e parcelamento deve ser ignorado. |
+| 2026-10-02 | Confirmada | O preço total oficial é R$ 247,00. | Novo valor solicitado para a oferta. | Página, tracking preparado e documentação devem usar a configuração central de preço. |
 | 2026-07-20 | Confirmada | As seis imagens são referências conceituais, não layouts nem copy autoritativos. | Elas contêm informações não confirmadas, inclusive preço divergente. | Preservar padrões úteis sem copiar conteúdo ou pixel a pixel. |
 | 2026-07-20 | Confirmada | Liberdade financeira/geográfica será tratada como aspiração, não promessa. | Produto financeiro envolve risco e resultados não são garantidos. | Copy deve enfatizar aprendizado, teste, configuração e acompanhamento. |
 | 2026-07-20 | Confirmada | A Etapa 1 contém apenas documentação, organização de referências e instruções. | Contrato explícito do briefing. | Nenhuma landing page, dependência, Pixel, checkout ou deploy nesta etapa. |

@@ -6,7 +6,7 @@ Este documento é vivo e deve seguir `.agent/PLANS.md`. Atualize-o durante a imp
 
 ## Propósito e resultado observável
 
-Entregar uma landing page navegável e mobile-first do Robô Trader que explique produto, método, demonstração, entrega, qualificação, risco e oferta de **R$197**. O protótipo deve funcionar sem framework, ser compreensível sem animações/tracking e estar pronto para receber VSL, Pixel e checkout quando os dados oficiais forem fornecidos.
+Entregar uma landing page navegável e mobile-first do Robô Trader que explique produto, método, demonstração, entrega, qualificação, risco e oferta de **R$ 247,00**. O protótipo deve funcionar sem framework, ser compreensível sem animações/tracking e estar pronto para receber VSL, Pixel e checkout quando os dados oficiais forem fornecidos.
 
 Ao final, abrir `index.html` por servidor local permite percorrer as 12 seções, usar menu, VSL/fallback, acordeões e sticky CTA. O layout foi validado em 320, 360, 375, 390, 430, 768, 1024 e 1440 px. Ausências comerciais permanecem vazias ou usam fallback explícito, sem conteúdo fictício.
 
@@ -16,13 +16,13 @@ Antes de editar, ler na ordem:
 
 1. `AGENTS.md` e `docs/INDEX.md`.
 2. `docs/project/PRODUCT_BRIEF.md`, `DECISIONS.md` e `OPEN_QUESTIONS.md`.
-3. `docs/copy/CLAIMS_AND_GUARDRAILS.md`, `COPY_MAP.md` e `docs/offer/OFFER_R197.md`.
+3. `docs/copy/CLAIMS_AND_GUARDRAILS.md`, `COPY_MAP.md` e `docs/offer/OFFER_R247.md`.
 4. `docs/ux/CONVERSION_FLOW.md`, `SECTION_BLUEPRINT.md` e `CTA_MAP.md`.
 5. `docs/visual/REFERENCE_ANALYSIS.md`, `VISUAL_SYSTEM.md` e `MOTION_SYSTEM.md`.
 6. `docs/technical/ARCHITECTURE.md`, `ASSET_STRATEGY.md`, `PERFORMANCE_BUDGET.md` e `docs/tracking/META_PIXEL_PLAN.md`.
 7. `docs/qa/ACCEPTANCE_CRITERIA.md`.
 
-Fatos imutáveis até nova decisão registrada: produto configurável; controle do usuário; risco financeiro; preço total R$197; nenhum parcelamento, garantia, resultado, compatibilidade, prova ou urgência presumidos.
+Fatos imutáveis até nova decisão registrada: produto configurável; controle do usuário; risco financeiro; preço total R$ 247,00; nenhum parcelamento, garantia, resultado, compatibilidade, prova ou urgência presumidos.
 
 ## Escopo
 
@@ -87,7 +87,7 @@ Não criar `package.json` por conveniência. Se requisito novo exigir ferramenta
 
 - Em 2026-07-20, a pasta não era repositório Git e não possuía stack, scripts ou integrações.
 - As referências são PNGs verticais de alta densidade; implementá-las como imagens causaria problemas de peso, acessibilidade e legibilidade.
-- A referência de oferta contém informações comerciais não autorizadas; apenas R$197 é fonte de verdade.
+- A referência de oferta contém informações comerciais não autorizadas; apenas R$ 247,00 é fonte de verdade.
 - Em 2026-07-20, o Git continuava ausente e foi inicializado. Não havia `user.name` nem `user.email`, portanto o commit inicial da fundação não pôde ser criado sem inventar identidade.
 - O primeiro QA em 320 px encontrou overflow causado por `min-width: 20rem` somado à barra vertical do navegador. O valor foi removido e todos os oito viewports passaram sem overflow horizontal.
 - O `<dialog>` nativo não respondeu a Escape no navegador embutido; um handler explícito foi adicionado e o foco volta ao acionador após o fechamento.
@@ -143,7 +143,7 @@ Registrar aqui decisões novas, alternativas e impactos antes de alterar o contr
 3. Implementar rollers como transições compartilhadas e evitar repetição de header/scroll hint.
 4. Conferir uma ideia principal por viewport e retirar copy/card redundante.
 
-**Resultado observável:** percurso completo com ritmo distinto e preço R$197 apresentado uma vez de forma dominante.
+**Resultado observável:** percurso completo com ritmo distinto e preço R$ 247,00 apresentado uma vez de forma dominante.
 
 ### Milestone 4 — mídia, interações e motion
 
@@ -157,7 +157,7 @@ Registrar aqui decisões novas, alternativas e impactos antes de alterar o contr
 
 ### Milestone 5 — oferta e tracking preparado
 
-1. Implementar preço total R$197, itens confirmados e aviso; sem parcela/garantia/urgência.
+1. Implementar preço total R$ 247,00, itens confirmados e aviso; sem parcela/garantia/urgência.
 2. Configurar destinos somente com valores oficiais. Se ausentes, manter fallback explícito.
 3. Criar helper de eventos sem ID real, com consentimento, deduplicação, UTMs e origem.
 4. Garantir que `InitiateCheckout`/`Contact` dependam de ações reais e `Purchase` permaneça impossível na landing.
@@ -223,7 +223,7 @@ Cumprir integralmente `docs/qa/ACCEPTANCE_CRITERIA.md`, com estas condições ad
 - **Peso próprio inicial:** 99.131 bytes não comprimidos, excluindo referências e screenshots de QA.
 - **QA automatizado:** 11/11 módulos com sintaxe válida; auditoria estática sem erros; nenhum termo comercial proibido; nenhum asset de referência carregado; um `h1`, 12 rollers animados, links internos válidos, alvos ARIA existentes e console sem erros.
 - **QA funcional:** menu, Escape e retorno de foco, acordeões, timeline, VSL sem URL, CTA de oferta sem checkout, sticky contextual, consentimento recusado/aceito e ausência de recursos externos verificados no navegador.
-- **Fatos preservados:** preço somente R$197, moeda BRL, nenhum parcelamento, garantia, resultado, depoimento, compatibilidade ou canal inventado.
+- **Fatos preservados:** preço somente R$ 247,00, moeda BRL, nenhum parcelamento, garantia, resultado, depoimento, compatibilidade ou canal inventado.
 - **Integrações inativas:** Meta Pixel, checkout, WhatsApp, vídeo oficial, prova opcional e publicação.
 - **Pendências:** assets oficiais, conteúdo comercial/jurídico, compatibilidades, staging, WebKit/Safari, navegador interno do Instagram, reduced motion emulado, zoom 200%, Core Web Vitals e integrações reais conforme `STAGE_3_QA_PLAN.md`.
 - **Git:** repositório local inicializado, sem commits; identidade Git ausente e nenhuma identidade fictícia foi criada.

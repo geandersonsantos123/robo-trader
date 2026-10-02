@@ -11,7 +11,7 @@ As seis imagens são **referência conceitual**, não assets de produção. Toda
 | `referencias-visuais/problema.png` | `03-dor-execucao-manual.png` | 1.547.486 | `CB9B419FB51E064AF020CFA21E8F0D6C8FAA5B7FCD3BCF5EED49E9B2DB8D57FC` |
 | `referencias-visuais/metodo.png` | `04-metodo-aprenda-teste-automatize.png` | 1.560.936 | `EE6877289DA93B49577A169DABF8C62EACAEC3D610E4D0C6BBF7ACE43A09D513` |
 | `referencias-visuais/estrutura.png` | `05-estrutura-completa.png` | 1.519.796 | `70947E0155A8F2D1D69F0C08BAEA2A804A864E6CCAF79001AAB0674ADAAF94AA` |
-| `referencias-visuais/oferta.png` | `06-oferta-r197.png` | 1.569.958 | `E638AD446BF8A53B04160FF41E215EA00600228D5568D8DBBB23EDF543F267C3` |
+| `referencias-visuais/oferta.png` | `06-oferta-r247.png` | 1.569.958 | `E638AD446BF8A53B04160FF41E215EA00600228D5568D8DBBB23EDF543F267C3` |
 
 ## Assets leves criados para o protótipo
 

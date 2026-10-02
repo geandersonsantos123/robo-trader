@@ -12,10 +12,10 @@ Copy de trabalho para prototipação. A versão pública depende da confirmaçã
 | Entrega | Valor | **Mais que acesso ao robô: uma estrutura para começar com clareza.** | Tecnologia, formação, conta demonstrativa, configuração, onboarding, materiais, suporte e atualizações do plano. | Escopo, nomes e duração precisam ser confirmados. |
 | Prova | Confiança | **Entenda a tecnologia por evidências, não por promessas.** | Demonstração, documentação, processo de teste e credenciais verificáveis têm prioridade. | Sem números, depoimentos ou autoridade fictícios. |
 | Compatibilidade | Qualificação | **Confira os requisitos antes de decidir.** | Explicar mercados, plataformas, conhecimentos e responsabilidades assim que forem confirmados. | Não listar compatibilidade inferida. |
-| Oferta | Decisão racional | **Uma estrutura para aprender, testar, configurar e acompanhar.** | Apresentar itens confirmados e “Investimento total: R$197”. | Sem parcela, preço anterior, desconto ou urgência. |
+| Oferta | Decisão racional | **Uma estrutura para aprender, testar, configurar e acompanhar.** | Apresentar itens confirmados e “Investimento total: R$ 247,00”. | Sem parcela, preço anterior, desconto ou urgência. |
 | Segurança | Redução de incerteza | **Comece entendendo processo, limites e suporte.** | Conta demo e onboarding ajudam a testar e configurar; operações financeiras continuam envolvendo risco. | Não chamar de risco zero nem de garantia. |
 | FAQ | Objeções | **Dúvidas importantes antes de começar.** | Respostas diretas sobre funcionamento, compatibilidade, pagamento, suporte e risco. | Responder “a confirmar” internamente; não publicar evasivas. |
-| Fechamento | Síntese | **Transforme interesse em um processo mais estruturado.** | Aprenda, teste, configure e acompanhe; decida com clareza sobre o investimento de R$197. | Nenhuma nova alegação no último CTA. |
+| Fechamento | Síntese | **Transforme interesse em um processo mais estruturado.** | Aprenda, teste, configure e acompanhe; decida com clareza sobre o investimento de R$ 247,00. | Nenhuma nova alegação no último CTA. |
 
 ## Vocabulário da marca
 

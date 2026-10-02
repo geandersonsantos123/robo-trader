@@ -12,7 +12,7 @@
 
 - Primeiro viewport explica o produto, para quem/problema em nível seguro, próximo passo e risco.
 - Fluxo segue desejo → problema → método → demonstração → valor → prova → qualificação → oferta → risco → FAQ → decisão.
-- Único preço exibido é **R$197**; nenhum parcelamento, preço anterior, desconto, garantia, urgência ou escassez foi inventado.
+- Único preço exibido é **R$ 247,00**; nenhum parcelamento, preço anterior, desconto, garantia, urgência ou escassez foi inventado.
 - CTAs têm destino real, rótulo coerente e origem rastreável; checkout e contato foram testados.
 - Nenhuma promessa de lucro, renda, acerto, ausência de risco ou liberdade garantida.
 - Provas, compatibilidades, credenciais, suporte e políticas são verificáveis.

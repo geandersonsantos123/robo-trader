@@ -12,7 +12,7 @@
 | 6 | Estrutura da entrega | “Não estou comprando apenas software.” | Itens e formatos confirmados; detalhes em acordeão. |
 | 7 | Prova e autoridade | “Há razões verificáveis para confiar.” | Demonstração, documentação e credenciais; prova social apenas se aprovada. |
 | 8 | Compatibilidade e qualificação | “Sei se isso serve para mim e o que preciso.” | Mercados, plataforma, requisitos e contraindicações confirmados. |
-| 9 | Oferta R$197 | “Entendi o que recebo e o investimento total.” | Lista curta, preço oficial, CTA e condições reais. |
+| 9 | Oferta R$ 247,00 | “Entendi o que recebo e o investimento total.” | Lista curta, preço oficial, CTA e condições reais. |
 | 10 | Redução de risco | “Minhas incertezas práticas foram tratadas sem falsa garantia.” | Conta demo, processo, suporte e política formal, se existirem. |
 | 11 | FAQ | “As objeções restantes têm respostas diretas.” | Perguntas reais e respostas verificadas. |
 | 12 | Fechamento emocional | “A decisão reconecta desejo e responsabilidade.” | Síntese da aspiração, método, risco e CTA correto. |
@@ -51,6 +51,6 @@
 
 - Alternar composição: hero com mídia; cards em trio; cards de dor 2×2; timeline; demonstração dividida; acordeões; prova editorial; checklist; oferta central; FAQ.
 - Não repetir headline + quatro cards em mais de duas seções.
-- Liberar sticky CTA após o visitante cruzar o método. Antes da oferta, omitir preço; depois da oferta, é permitido mostrar “R$197”.
+- Liberar sticky CTA após o visitante cruzar o método. Antes da oferta, omitir preço; depois da oferta, é permitido mostrar “R$ 247,00”.
 - Se prova, compatibilidade ou política não forem confirmadas, não preencher com placeholders públicos: reduzir ou ocultar o bloco e registrar a lacuna.
 - Manter 12 seções, mas projetar transições como uma narrativa contínua. A página pode ser longa; não deve parecer repetitiva.

@@ -4,6 +4,7 @@ import { select, setText } from "./utils.js";
 export function initStickyCTA() {
   const sticky = select("[data-sticky-cta]");
   const button = select("[data-sticky-button]");
+  const price = select("[data-sticky-price]");
   const kicker = select("[data-sticky-kicker]");
   const method = select("#metodo");
   const offer = select("#oferta");
@@ -17,6 +18,7 @@ export function initStickyCTA() {
     sticky.classList.toggle("is-visible", visible);
     sticky.setAttribute("aria-hidden", String(!visible));
     setText(kicker, "OFERTA LIMITADA • 1 HORA");
+    if (price) price.hidden = false;
     setText(button, "Comprar agora");
   };
 

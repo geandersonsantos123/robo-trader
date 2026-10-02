@@ -77,7 +77,7 @@ Os títulos abaixo são direções de conteúdo, não copy comercial aprovada. C
 - **Objetivo:** permitir autoqualificação e evitar compra inadequada.
 - **Conteúdo:** “é para”, “não é para”, plataformas/mercados, requisitos, papel do usuário e limites — todos confirmados.
 - **Layout:** dois painéis contrastantes e tabela/lista de compatibilidade; vermelho apenas no “não é para” como sinal semântico.
-- **CTA:** “Ver a oferta de R$197” → `#oferta`.
+- **CTA:** “Ver a oferta de R$ 247,00” → `#oferta`.
 - **Roller:** “confira requisitos • entenda os limites • decida com clareza”.
 - **Movimento:** sem animação além de fade/translate curto.
 - **Aceite:** compatibilidades ausentes são marcadas internamente como pendência, nunca publicadas por inferência.
@@ -85,12 +85,12 @@ Os títulos abaixo são direções de conteúdo, não copy comercial aprovada. C
 ## 9. Oferta — `#oferta`
 
 - **Objetivo:** apresentar entrega e investimento com máxima clareza.
-- **Conteúdo:** nome, pilares confirmados, “Investimento total: R$197”, condições aprovadas, aviso de risco e ação primária.
+- **Conteúdo:** nome, pilares confirmados, “Investimento total: R$ 247,00”, condições aprovadas, aviso de risco e ação primária.
 - **Layout:** card central com contraste forte; sem preço riscado, parcela, falsa economia ou excesso de glow.
 - **CTA:** “Acessar o Robô Trader” → destino pendente; secundário de contato apenas se canal oficial for fornecido.
 - **Roller:** “aprenda • teste • configure • acompanhe”.
 - **Movimento:** `ViewOffer` uma vez quando metade do card entra na viewport; preço sem contagem.
-- **Aceite:** único valor é R$197; `InitiateCheckout` só dispara no clique que realmente inicia checkout.
+- **Aceite:** único valor é R$ 247,00; `InitiateCheckout` só dispara no clique que realmente inicia checkout.
 
 ## 10. Redução de risco — `#seguranca`
 

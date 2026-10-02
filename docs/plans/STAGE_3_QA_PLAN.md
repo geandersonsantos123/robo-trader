@@ -38,7 +38,7 @@ Transformar o protótipo aprovado da Etapa 2 em uma versão pronta para publica�
 ## Linha de base recebida da Etapa 2
 
 - landing estática em `index.html`, com 12 seções, 8 folhas CSS e 11 módulos JavaScript;
-- configuração pública em `assets/js/runtime-config.js`, com preço `197`, moeda `BRL` e integrações vazias;
+- configuração pública em `assets/js/runtime-config.js`, com preço `247`, moeda `BRL` e integrações vazias;
 - VSL, checkout e Meta Pixel protegidos por fallbacks explícitos, sem chamadas externas;
 - peso inicial próprio aproximado de 99.131 bytes não comprimidos;
 - QA Chromium executado nos viewports 320, 360, 375, 390, 430, 768, 1024 e 1440 px, sem overflow ou erros de console;
@@ -59,14 +59,14 @@ Se um gate material continuar aberto, auditar o restante, registrar o bloqueio e
 
 ## Frentes de auditoria
 
-1. **Conteúdo/compliance:** confrontar cada alegação com evidência; revisar preço R$197, risco, condições, provas e FAQ.
+1. **Conteúdo/compliance:** confrontar cada alegação com evidência; revisar preço R$ 247,00, risco, condições, provas e FAQ.
 2. **CRO:** verificar clareza acima da dobra, continuidade do Instagram, progressão, densidade, CTAs, qualificação e redução de risco.
 3. **Visual:** comparar padrões, não pixels; revisar tipografia, contraste, cards, rollers, glow, fundos e consistência de assets.
 4. **Responsivo:** repetir 320×800, 360×800, 375×812, 390×844, 430×932, 768×1024, 1024×768 e 1440×900; acrescentar zoom 200%, orientação e safe areas.
 5. **Acessibilidade:** teclado, foco, landmarks, headings, acordeões, alt, legenda, reduced motion e contraste.
 6. **Funcional:** menu, VSL, FAQ, sticky, links, checkout, contato, consentimento, falhas de terceiros e retorno.
 7. **Performance:** cache frio/quente, LCP/INP/CLS, peso, poster, fontes, third parties e download sob intenção.
-8. **Tracking:** evento por gatilho, UTMs, deduplicação, consentimento, `197`/`BRL`, ausência de PII e `Purchase` real.
+8. **Tracking:** evento por gatilho, UTMs, deduplicação, consentimento, `247`/`BRL`, ausência de PII e `Purchase` real.
 9. **SEO/social:** título, descrição, canonical, idioma, OG 1200×630, favicon, robots/sitemap quando aplicável.
 10. **Publicação:** build/arquivos servidos, variáveis por ambiente, URL real, refresh, HTTPS, cache e rollback.
 
@@ -86,7 +86,7 @@ Se um gate material continuar aberto, auditar o restante, registrar o bloqueio e
 - consentimento não definido, recusado, aceito e reaberto pelo rodapé;
 - VSL antes do clique, reprodução, 25/50/75/100%, erro e legenda/transcrição;
 - CTA interno, CTA fixa antes/depois da oferta, CTA real de checkout e retorno/cancelamento;
-- nenhuma ocorrência de preço diferente de R$197 e nenhum `Purchase` por visita, refresh ou clique;
+- nenhuma ocorrência de preço diferente de R$ 247,00 e nenhum `Purchase` por visita, refresh ou clique;
 - reduced motion real, teclado completo, foco visível, Escape, leitor de tela e zoom 200%;
 - Safari/WebKit, iOS real e navegador interno do Instagram, além do Chromium já coberto;
 - 404, CSP, bloqueador de conteúdo, rede lenta/offline e indisponibilidade de checkout/Pixel.

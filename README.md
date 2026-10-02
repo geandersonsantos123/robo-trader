@@ -35,7 +35,7 @@ Não há `package.json`, build obrigatório, framework ou dependência de runtim
 - preferências de consentimento;
 - flags opcionais de tracking e debug local.
 
-O checkout oficial atual é `https://pay.hotmart.com/B96582866Y?checkoutMode=10`.
+O checkout oficial atual é `https://pay.hotmart.com/B96582866Y?off=6k2dunwv`.
 
 ## VSL
 

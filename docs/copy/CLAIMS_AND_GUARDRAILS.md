@@ -6,7 +6,7 @@
 - Dizer que a proposta combina tecnologia, educação, conta demonstrativa, configuração, onboarding, materiais, suporte e atualizações do plano, sem inventar escopo.
 - Usar “mais organização”, “mais flexibilidade de rotina”, “aprender”, “testar”, “configurar”, “acompanhar” e “manter o controle” como objetivos de processo.
 - Dizer que mercados financeiros envolvem riscos e que nenhum resultado é garantido.
-- Apresentar o preço total de R$197.
+- Apresentar o preço total de R$ 247,00.
 
 ## Proibido
 
@@ -38,7 +38,7 @@ Cada alegação dependente deve apontar para evidência aprovada e ter responsá
 
 ## Checklist de revisão
 
-1. O único preço é R$197?
+1. O único preço é R$ 247,00?
 2. Não existe número de parcelas ou preço anterior?
 3. Toda prova tem fonte e autorização?
 4. “Liberdade” aparece como aspiração, não resultado?

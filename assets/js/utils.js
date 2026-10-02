@@ -34,3 +34,12 @@ export function toSafeUrl(value, { allowRelative = true } = {}) {
 export function setText(element, value) {
   if (element && typeof value === "string") element.textContent = value;
 }
+
+export function formatPrice(value, currency = "BRL") {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(value).replace(/\u00a0/g, " ");
+}

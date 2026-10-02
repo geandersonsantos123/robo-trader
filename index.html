@@ -329,12 +329,10 @@
                 <div class="offer-purchase">
                   <div class="price-lockup">
                     <svg class="price-lockup__icon" aria-hidden="true"><use href="#icon-card"/></svg>
-                    <small>12X DE</small>
-                    <strong>R$ 15,30</strong>
-                    <em>ou R$ 147,90 à vista</em>
-                    <span>De <s>R$ 697,90</s></span>
-                    <b>Você economiza R$ 550,00</b>
-                    <p class="price-lockup__notice">Garanta a condição promocional antes que o cronômetro termine.</p>
+                    <small>INVESTIMENTO TOTAL</small>
+                    <strong data-price></strong>
+                    <em data-price-template="{price} à vista"></em>
+                    <p class="price-lockup__notice">Garanta sua condição antes que o cronômetro termine.</p>
                   </div>
                 </div>
               </div>
@@ -404,7 +402,7 @@
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-what"><span>O que é o Robô Trader?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-what" role="region"><p>É uma ferramenta de automação configurável que executa parâmetros definidos por você em mercados compatíveis, acompanhada por uma estrutura de aprendizado, testes e suporte.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-control"><span>O robô decide por mim?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-control" role="region"><p>Não. Você define parâmetros, regras e limites, além de manter o acompanhamento e a responsabilidade pelas decisões.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-demo"><span>Posso testar antes do uso real?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-demo" role="region"><p>A oferta inclui uma conta demonstrativa para aprender e testar a configuração antes de considerar outros ambientes.</p></div></article>
-            <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-price"><span>Qual é o investimento?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-price" role="region"><p>Durante a oferta especial, o acesso à estrutura aparece no checkout por R$ 147,90 à vista. O checkout também permite parcelamento em até 12x no cartão, com acréscimo no valor parcelado.</p></div></article>
+            <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-price"><span>Qual é o investimento?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-price" role="region"><p data-price-template="Durante a oferta especial, o acesso à estrutura aparece no checkout por {price} à vista."></p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-safe"><span>A compra é segura?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-safe" role="region"><p>Sim. O pagamento é processado pela Hotmart, uma plataforma reconhecida de produtos digitais. Os dados de pagamento são tratados em um ambiente seguro.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-guarantee"><span>O Robô Trader possui garantia?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-guarantee" role="region"><p>Sim. O produto possui 7 dias de garantia. Durante esse prazo, você poderá acessar o conteúdo, conhecer o sistema e solicitar o reembolso pelos canais e procedimentos disponibilizados pela Hotmart.</p></div></article>
             <article class="accordion__item" data-reveal><h3><button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-access"><span>Quando recebo o acesso?</span><i aria-hidden="true"></i></button></h3><div class="accordion__panel" id="faq-access" role="region"><p>Após a confirmação do pagamento pela Hotmart, as informações de acesso ao produto serão enviadas para o e-mail utilizado na compra.</p></div></article>
@@ -426,7 +424,7 @@
     </footer>
 
     <div class="sticky-cta glass-card" data-sticky-cta aria-hidden="true">
-      <div><span data-sticky-kicker>OFERTA LIMITADA • 1 HORA</span><strong data-sticky-price hidden></strong></div>
+      <div><span data-sticky-kicker>OFERTA LIMITADA • 1 HORA</span><strong data-sticky-price data-price hidden></strong></div>
       <button type="button" class="button button--primary" data-sticky-button aria-label="Comprar agora, ir para a oferta">Comprar agora</button>
     </div>
 

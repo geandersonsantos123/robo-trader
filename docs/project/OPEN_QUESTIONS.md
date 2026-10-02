@@ -3,7 +3,7 @@
 ## Bloqueiam oferta ou conversão
 
 - Qual é o destino primário: checkout, WhatsApp ou outro canal? Fornecer URL/telefone oficial.
-- Quais formas de pagamento, parcelamento e condições estão aprovadas? O único fato atual é o total de R$197.
+- Quais formas de pagamento, parcelamento e condições estão aprovadas? O único fato atual é o total de R$ 247,00.
 - Existe política de garantia, reembolso ou cancelamento? Qual texto, prazo e base legal aprovados?
 - O acesso é imediato? Qual duração de licença, renovação e vínculo entre compra, ferramenta e formação?
 - O que exatamente está incluído em tecnologia, formação, conta demonstrativa, onboarding, materiais, suporte e atualizações?

@@ -4,7 +4,7 @@
 
 As seis imagens têm 941×1672 e simulam seções mobile dentro de uma moldura de aparelho. Elas orientam composição, atmosfera e hierarquia; não são screenshots de uma página contínua. Cabeçalho, menu, roller e indicação “role” repetidos em todas as peças devem virar elementos reais compartilhados, não duplicados em cada seção.
 
-Textos, preços, parcelamento, duração de vídeo, recursos, resultados, compatibilidades, provas e condições vistos nas imagens não são autoritativos. O único preço oficial é **R$197**.
+Textos, preços, parcelamento, duração de vídeo, recursos, resultados, compatibilidades, provas e condições vistos nas imagens não são autoritativos. O único preço oficial é **R$ 247,00**.
 
 ## 01 — Hero e VSL
 
@@ -118,7 +118,7 @@ Textos, preços, parcelamento, duração de vídeo, recursos, resultados, compat
 
 ## 06 — Oferta
 
-- **Arquivo / seção:** [`06-oferta-r197.png`](../../references/visual/mobile-sections/06-oferta-r197.png); decisão de compra.
+- **Arquivo / seção:** [`06-oferta-r247.png`](../../references/visual/mobile-sections/06-oferta-r247.png); decisão de compra.
 - **Objetivo psicológico:** consolidar valor, preço, segurança e ação em um único foco.
 - **Papel na conversão:** converter compreensão em início de checkout ou contato.
 - **Primeira percepção:** headline e card de estrutura; o bloco de preço gigante domina logo depois.
@@ -135,8 +135,8 @@ Textos, preços, parcelamento, duração de vídeo, recursos, resultados, compat
 - **Mobile real:** manter preço em uma linha legível, CTAs sem overflow e aviso de risco com contraste; evitar três microcards apertados.
 - **Padrões reutilizáveis:** offer card, deliverables checklist, price lockup, CTA group e risk notice.
 - **Legibilidade:** excesso de níveis, glow e pequenos textos competem; simplificar resumo e mover dúvidas para FAQ.
-- **Não copiar:** qualquer preço, parcelamento, valor à vista, ancoragem, preço riscado, “acesso imediato”, formação nomeada, condição, item, WhatsApp ou outro dado comercial da imagem. O único preço autorizado é **R$197**.
-- **Conceito vs. implementação:** usar “Investimento total: R$197”, itens confirmados, link real e tracking após consentimento; nenhuma parte comercial deve vir do raster.
+- **Não copiar:** qualquer preço, parcelamento, valor à vista, ancoragem, preço riscado, “acesso imediato”, formação nomeada, condição, item, WhatsApp ou outro dado comercial da imagem. O único preço autorizado é **R$ 247,00**.
+- **Conceito vs. implementação:** usar “Investimento total: R$ 247,00”, itens confirmados, link real e tracking após consentimento; nenhuma parte comercial deve vir do raster.
 
 ## Síntese compartilhada
 

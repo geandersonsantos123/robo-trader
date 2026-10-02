@@ -4,7 +4,7 @@
 
 O **ROBÔ TRADER** é uma ferramenta de automação configurável para executar parâmetros definidos pelo usuário em mercados financeiros compatíveis. A landing page deve transformar tráfego aspiracional do Instagram em compreensão concreta da oferta e conduzir o visitante a uma próxima ação ainda pendente de confirmação (checkout ou contato).
 
-Preço total oficial: **R$197**.
+Preço total oficial: **R$ 247,00**.
 
 ## Público e contexto de chegada
 
@@ -30,7 +30,7 @@ A proposta não é “apenas um robô”. Deve combinar, com escopo ainda a conf
 - suporte;
 - atualizações correspondentes ao plano.
 
-Detalhes e pendências: [OFFER_R197.md](../offer/OFFER_R197.md).
+Detalhes e pendências: [OFFER_R247.md](../offer/OFFER_R247.md).
 
 ## Mensagem central
 
@@ -40,4 +40,4 @@ Essa frase é direção de copy, não alegação de resultado. “Possibilidades
 
 ## Critério de sucesso
 
-Primeiro, o visitante entende o que é o produto, como funciona, o que recebe, os riscos e para quem é. Depois, chega à oferta de R$197 e inicia a ação correta sem ambiguidade. Métricas futuras: avanço na VSL, visualização da oferta, início de checkout ou contato e compra confirmada; clique não equivale a venda.
+Primeiro, o visitante entende o que é o produto, como funciona, o que recebe, os riscos e para quem é. Depois, chega à oferta de R$ 247,00 e inicia a ação correta sem ambiguidade. Métricas futuras: avanço na VSL, visualização da oferta, início de checkout ou contato e compra confirmada; clique não equivale a venda.

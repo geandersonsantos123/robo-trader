@@ -6,7 +6,7 @@
 2. [Decisões](project/DECISIONS.md)
 3. [Questões abertas](project/OPEN_QUESTIONS.md)
 4. [Alegações e limites](copy/CLAIMS_AND_GUARDRAILS.md)
-5. [Oferta oficial de R$197](offer/OFFER_R197.md)
+5. [Oferta oficial de R$ 247,00](offer/OFFER_R247.md)
 6. [Fluxo de conversão](ux/CONVERSION_FLOW.md)
 7. [Blueprint das seções](ux/SECTION_BLUEPRINT.md)
 8. [Mapa de copy](copy/COPY_MAP.md) e [mapa de CTAs](ux/CTA_MAP.md)
