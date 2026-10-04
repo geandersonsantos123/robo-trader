@@ -1,10 +1,11 @@
 // Configuração segura da landing page. Integrações desconhecidas permanecem vazias.
 // Este arquivo roda no navegador e não pode conter segredos.
 const localHostnames = new Set(["localhost", "127.0.0.1", "[::1]"]);
+export const CHECKOUT_URL = "https://pay.hotmart.com/B96582866Y?checkoutMode=10&bid=1791143827797";
 
 export const runtimeConfig = Object.freeze({
   metaPixelId: "",
-  checkoutUrl: "https://pay.hotmart.com/B96582866Y?off=6k2dunwv",
+  checkoutUrl: CHECKOUT_URL,
   whatsappNumber: "",
   whatsappMessage: "",
   videoUrl: "",
