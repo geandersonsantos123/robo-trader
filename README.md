@@ -37,7 +37,7 @@ Não há `package.json`, build obrigatório, framework ou dependência de runtim
 - flags opcionais de tracking e debug local.
 
 O checkout oficial atual é `https://pay.hotmart.com/B96582866Y?checkoutMode=10&bid=1791143827797`.
-O Meta Pixel oficial ativo é `927197533517588`, com bootstrap prioritário no `<head>` e eventos adicionais centralizados em `assets/js/tracking.js`.
+O Meta Pixel oficial ativo é `1763196558296345`, com bootstrap prioritário no `<head>` e eventos adicionais centralizados em `assets/js/tracking.js`.
 
 ## VSL
 

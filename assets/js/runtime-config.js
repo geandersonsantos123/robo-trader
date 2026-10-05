@@ -1,7 +1,7 @@
 // Configuração segura da landing page. Integrações desconhecidas permanecem vazias.
 // Este arquivo roda no navegador e não pode conter segredos.
 const localHostnames = new Set(["localhost", "127.0.0.1", "[::1]"]);
-const metaPixelId = window.ROBO_TRADER_META_PIXEL_ID || "927197533517588";
+const metaPixelId = window.ROBO_TRADER_META_PIXEL_ID || "1763196558296345";
 export const CHECKOUT_URL = "https://pay.hotmart.com/B96582866Y?checkoutMode=10&bid=1791143827797";
 
 export const runtimeConfig = Object.freeze({
