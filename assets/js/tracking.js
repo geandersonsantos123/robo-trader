@@ -4,12 +4,12 @@ import { safeStorage, selectAll } from "./utils.js";
 const CONSENT_KEY = "roboTraderMarketingConsent.v1";
 const UTM_KEY = "roboTraderAttribution.v1";
 const UTM_ALLOWLIST = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-const STANDARD_EVENTS = new Set(["PageView", "ViewContent", "VideoStart", "ViewOffer", "InitiateCheckout", "Contact"]);
+const STANDARD_EVENTS = new Set(["PageView", "ViewContent", "Search", "Lead", "Contact", "CompleteRegistration", "AddToCart", "AddToWishlist", "InitiateCheckout", "Purchase"]);
 const trackedKeys = new Set();
 let pixelReady = false;
 
 export function getMarketingConsent() {
-  return safeStorage(window.localStorage, "get", CONSENT_KEY) || "unset";
+  return safeStorage(window.localStorage, "get", CONSENT_KEY) || (runtimeConfig.consentRequired ? "unset" : "accepted");
 }
 
 export function setMarketingConsent(value) {
@@ -41,10 +41,15 @@ function loadMetaPixel() {
     window.fbq = fbq;
     const script = document.createElement("script");
     script.async = true;
+    script.fetchPriority = "high";
+    script.crossOrigin = "anonymous";
     script.src = "https://connect.facebook.net/en_US/fbevents.js";
     document.head.append(script);
   }
-  window.fbq("init", runtimeConfig.metaPixelId);
+  if (!window.__roboTraderMetaPixelInitialized) {
+    window.fbq("init", runtimeConfig.metaPixelId);
+    window.__roboTraderMetaPixelInitialized = true;
+  }
   pixelReady = true;
   return true;
 }
@@ -92,7 +97,15 @@ export function appendAttribution(url) {
 
 function activateMarketing() {
   if (!loadMetaPixel()) return;
-  track("PageView", {}, { dedupKey: "PageView" });
+  if (window.__roboTraderMetaPixelPageView) {
+    if (!trackedKeys.has("PageView")) {
+      trackedKeys.add("PageView");
+      dispatchLocal("PageView", {});
+    }
+  } else {
+    track("PageView", {}, { dedupKey: "PageView" });
+    window.__roboTraderMetaPixelPageView = true;
+  }
   track("ViewContent", { content_name: runtimeConfig.productName, content_type: "product" }, { dedupKey: "ViewContent" });
 }
 
@@ -131,10 +144,60 @@ function bindCTAs() {
   });
 }
 
+function observeSections() {
+  const sections = selectAll("main section[id]");
+  if (!sections.length || !("IntersectionObserver" in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting || entry.intersectionRatio < 0.45) return;
+      const section = entry.target;
+      track("SectionView", {
+        section_id: section.id,
+        section_label: section.getAttribute("aria-labelledby") || section.id
+      }, { dedupKey: `SectionView:${section.id}` });
+      observer.unobserve(section);
+    });
+  }, { threshold: [0.45, 0.65] });
+  sections.forEach((section) => observer.observe(section));
+}
+
+function bindScrollDepth() {
+  const thresholds = [25, 50, 75, 90];
+  const reached = new Set();
+  const update = () => {
+    const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const current = Math.min(100, Math.round((window.scrollY / scrollable) * 100));
+    thresholds.forEach((threshold) => {
+      if (current < threshold || reached.has(threshold)) return;
+      reached.add(threshold);
+      track("ScrollDepth", { depth: threshold }, { dedupKey: `ScrollDepth:${threshold}` });
+    });
+    if (reached.size === thresholds.length) window.removeEventListener("scroll", update);
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
+function bindFAQInteractions() {
+  selectAll(".accordion__trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+      if (!willOpen) return;
+      track("FAQOpen", {
+        question: trigger.textContent.trim().replace(/\s+/g, " ").slice(0, 120),
+        accordion_id: trigger.getAttribute("aria-controls") || "unknown"
+      });
+    });
+  });
+}
+
 export function initTracking() {
   captureAttribution();
   bindCTAs();
+  bindFAQInteractions();
+  bindScrollDepth();
   observeOffer();
+  observeSections();
   window.addEventListener("robo:consent-change", (event) => {
     if (event.detail?.value === "accepted") activateMarketing();
   });

@@ -1,20 +1,21 @@
 # Plano de Meta Pixel e atribuição
 
-**Estado após a Etapa 2:** helper implementado e inativo. Nenhum Pixel ID foi configurado e nenhum script da Meta é carregado com a configuração atual.
+**Estado publicado:** Meta Pixel oficial configurado e carregado com prioridade no `<head>`. O helper centralizado continua responsável por eventos, parâmetros, deduplicação e UTMs.
 
 ## Configuração
 
-- Expor o ID por variável de ambiente/deploy, recomendada `PUBLIC_META_PIXEL_ID`; não fixar ID no código.
+- Pixel ID oficial publicado: `1750013079679839`.
 - Um helper centralizado encapsula carregamento, consentimento, fila, parâmetros e deduplicação.
-- Marketing só carrega conforme política de consentimento aprovada. A página continua funcional se o script for recusado/bloqueado.
+- O script da Meta usa `preconnect`, `dns-prefetch`, `preload` e bootstrap antecipado no `<head>`. A página continua funcional se o script for recusado/bloqueado.
 - Validar a especificação vigente da Meta e a política jurídica antes da publicação; nomes abaixo são o contrato desejado do produto.
 
 ### Implementação atual
 
-- `assets/js/runtime-config.js` mantém `metaPixelId`, checkout, WhatsApp e VSL vazios; `price: 247` e `currency: BRL` são os únicos dados comerciais preenchidos.
-- `assets/js/tracking.js` centraliza consentimento, deduplicação em memória, UTMs permitidas, eventos locais e carregamento condicional do Pixel.
+- `assets/js/runtime-config.js` mantém `metaPixelId`, checkout, preço, parcelas e demais dados públicos da landing.
+- `assets/js/tracking.js` centraliza deduplicação em memória, UTMs permitidas, eventos locais e envio para o Pixel.
 - `CTAInteraction` é o evento local para todos os CTAs, com `cta_id`, seção, destino e tipo de ação.
-- `ViewOffer` ocorre uma vez após visibilidade mínima do card; eventos de vídeo só são ligados quando existe mídia real e a reprodução começa.
+- `ViewOffer` ocorre uma vez após visibilidade mínima do card; `SectionView`, `ScrollDepth` e `FAQOpen` ampliam a medição de navegação e intenção.
+- Eventos de vídeo só são ligados quando existe mídia real e a reprodução começa.
 - `InitiateCheckout` só dispara se uma URL de checkout válida existir. Com a URL vazia, o CTA abre um diálogo e registra apenas a interação local.
 - Não existe chamada de interface para `Purchase`.
 
@@ -30,11 +31,15 @@
 | `VideoProgress75` | Primeiro cruzamento de 75% | `progress: 75` | Idem. |
 | `VideoComplete` | Player confirma término | `progress: 100` | Não inferir por tempo aproximado. |
 | `ViewOffer` | ≥50% do card de oferta visível por ~1 s | `content_name`, `value: 247`, `currency: BRL` | Uma vez. |
+| `SectionView` | Primeira visualização relevante de cada seção | `section_id`, `section_label` | Evento customizado. |
+| `ScrollDepth` | 25%, 50%, 75% e 90% de profundidade | `depth` | Evento customizado. |
+| `FAQOpen` | Abertura real de pergunta no FAQ | `question`, `accordion_id` | Evento customizado sem PII. |
+| `CTAInteraction` | Clique em CTA interno ou de mídia | `cta_id`, `section`, `destination`, `action_type` | Evento customizado. |
 | `InitiateCheckout` | Clique válido que abre checkout real | `value: 247`, `currency: BRL`, `source_section`, `cta_id` | Não disparar em CTA de rolagem. |
 | `Contact` | Clique em canal oficial de contato | `source_section`, `cta_id`, `contact_type` | Sem telefone, texto livre ou PII. |
 | `Purchase` | Confirmação real e confiável do pagamento | `value: 247`, `currency: BRL`, `order_id/event_id` | Nunca na landing ou mero retorno de URL. |
 
-Eventos de navegação interna usam o evento local `CTAInteraction`; não precisam ser enviados como eventos-padrão Meta se não houver objetivo claro.
+Eventos de navegação interna usam `CTAInteraction` como evento customizado, sem transformar rolagem ou curiosidade em evento de compra.
 
 ## Deduplicação
 
@@ -64,6 +69,6 @@ Eventos de navegação interna usam o evento local `CTAInteraction`; não precis
 1. Testar consentido, recusado, bloqueador de conteúdo e ausência de ID.
 2. Inspecionar rede/helper para eventos únicos, ordem e parâmetros.
 3. Testar todos os pontos de vídeo, oferta, CTAs e retorno do checkout.
-4. Confirmar `197` e `BRL` em `ViewOffer`, `InitiateCheckout` e `Purchase` real.
+4. Confirmar `247` e `BRL` em `ViewOffer`, `InitiateCheckout` e `Purchase` real.
 5. Validar UTMs com caracteres especiais e ausência de PII.
 6. Usar ferramentas oficiais vigentes da Meta no ambiente de teste; registrar evidência sem expor IDs/credenciais.

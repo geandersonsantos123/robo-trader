@@ -14,6 +14,36 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Robô Trader | Tecnologia global com controle humano">
     <meta name="twitter:description" content="Aprenda, teste, configure e acompanhe uma automação definida por você.">
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="preload" href="https://connect.facebook.net/en_US/fbevents.js" as="script" crossorigin fetchpriority="high">
+    <script>
+      window.ROBO_TRADER_META_PIXEL_ID = "1750013079679839";
+      !function(f,b,e,v,n,t,s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.fetchPriority = "high";
+        t.crossOrigin = "anonymous";
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", window.ROBO_TRADER_META_PIXEL_ID);
+      fbq("track", "PageView");
+      window.__roboTraderMetaPixelInitialized = true;
+      window.__roboTraderMetaPixelPageView = true;
+    </script>
     <script>
       (() => {
         try {
@@ -37,6 +67,7 @@
     <script type="module" src="assets/js/app.js"></script>
   </head>
   <body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1750013079679839&ev=PageView&noscript=1" alt=""></noscript>
     <div class="site-preloader" data-preloader role="status" aria-live="polite" aria-busy="true" aria-label="Iniciando sistema do Robô Trader">
       <div class="preloader__circuit" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="preloader__panel">

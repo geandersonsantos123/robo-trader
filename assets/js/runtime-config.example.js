@@ -18,7 +18,7 @@ export const runtimeConfig = Object.freeze({
   currency: "BRL",
   companyName: "",
   supportEmail: "",
-  consentRequired: true,
+  consentRequired: false,
   showTestimonials: false,
   debug: false
 });
