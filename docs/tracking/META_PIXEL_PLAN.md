@@ -4,7 +4,7 @@
 
 ## Configuração
 
-- Pixel ID oficial publicado: `1763196558296345`.
+- Pixel ID oficial publicado: `2536270660129557`.
 - Um helper centralizado encapsula carregamento, consentimento, fila, parâmetros e deduplicação.
 - O script da Meta usa `preconnect`, `dns-prefetch`, `preload` e bootstrap antecipado no `<head>`. A página continua funcional se o script for recusado/bloqueado.
 - Validar a especificação vigente da Meta e a política jurídica antes da publicação; nomes abaixo são o contrato desejado do produto.
