@@ -23,8 +23,8 @@
 | `risk-faq` | Segurança | Revisar dúvidas frequentes | `#faq` | `cta_click` interno |
 | `faq-offer` | FAQ | Voltar à oferta | `#oferta` | `cta_click` interno |
 | `final-primary` | Fechamento | Começar com a estrutura | Mesmo checkout confirmado | `InitiateCheckout`, origem `final` |
-| `sticky-primary` | Sticky dinâmica | Comprar agora | `#oferta` | `cta_click` interno |
+| `sticky-primary` | Sticky dinâmica | Comprar agora | `CHECKOUT_URL` em `assets/js/runtime-config.js` | `CTAInteraction` + `InitiateCheckout`, origem `sticky` |
 
 ## Comportamento atual
 
-O checkout oficial fica centralizado em `CHECKOUT_URL` no arquivo público de configuração. CTAs transacionais usam `data-commercial-action`; CTAs de navegação interna, incluindo a sticky mobile, preservam rolagem para a seção correspondente.
+O checkout oficial fica centralizado em `CHECKOUT_URL` no arquivo público de configuração. CTAs transacionais usam o handler comercial centralizado; CTAs de navegação interna preservam rolagem para a seção correspondente.

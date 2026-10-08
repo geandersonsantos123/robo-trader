@@ -1,16 +1,15 @@
 import { track } from "./tracking.js";
 import { select, setText } from "./utils.js";
 
-export function initStickyCTA() {
+export function initStickyCTA({ onCommercial } = {}) {
   const sticky = select("[data-sticky-cta]");
   const button = select("[data-sticky-button]");
   const price = select("[data-sticky-price]");
   const kicker = select("[data-sticky-kicker]");
   const method = select("#metodo");
-  const offer = select("#oferta");
   const offerCTA = select("[data-offer-cta]");
   const footer = select("[data-site-footer]");
-  if (!sticky || !button || !method || !offer) return;
+  if (!sticky || !button || !method) return;
 
   const state = { methodReached: false, offerCTAVisible: false, footerVisible: false };
   const render = () => {
@@ -44,9 +43,8 @@ export function initStickyCTA() {
   }
 
   button.addEventListener("click", () => {
-    track("CTAInteraction", { cta_id: "sticky-primary", label: "Comprar agora", section: "sticky", destination: "#oferta", action_type: "scroll" });
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    offer.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    track("CTAInteraction", { cta_id: "sticky-primary", label: "Comprar agora", section: "sticky", destination: "checkout", action_type: "commercial" });
+    if (typeof onCommercial === "function") onCommercial("sticky");
   });
 
   render();
